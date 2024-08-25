@@ -1,0 +1,8 @@
+official cellpose package document: https://cellpose.readthedocs.io/en/latest/index.html
+official cellpose API: https://cellpose.readthedocs.io/en/latest/api.html
+
+
+cellpose_gpu.py: (Used for evaluating on datasets)
+    pipelining the inference of cellpose with gpu
+
+
