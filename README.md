@@ -22,15 +22,15 @@ An ongoing project updating new cell foundation models, evaluations, and nuclei 
 - **Cell AI FMs Fine-tuning Support:**  Includes patch-level fine-tuning codebases for domain-specific model enhancement (e.g., kidney pathology).
   
 ## 🚀 CellFM-HITL Workflow
-- Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-cell-fms-inference-pipeline--model-summary))
+- Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-cell-fms-inference-pipeline--model-summary)).
 
-- Step 2: **Multi-FMs Performance Rating and Data Enrichment** ([CellFMs-HITL Data Enrichment Illustration](#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration))  
+- Step 2: **Multi-FMs Performance Rating and Data Enrichment** ([CellFMs-HITL Data Enrichment Illustration](#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration)).  
 
-- Step 3: **Cell FMs Continuous Fine-Tuning with Scalably Enriched Data** ([Continuous Model Fine-Tuning with Enriched Data](#-continuous-model-fine-tuning-with-enriched-data))  
+- Step 3: **Cell FMs Continuous Fine-Tuning with Scalably Enriched Data** ([Continuous Model Fine-Tuning with Enriched Data](#-continuous-model-fine-tuning-with-enriched-data)).  
 
 
 ## 🔬 Cell FMs Inference Pipeline & Model Summary
-We detail the evaluated SOTA cell FMs, their architectures, post-processing methods, original sources, and our customized patch-level inference pipeline.
+We detail the evaluated SOTA cell FMs, their architectures, post-processing methods, original sources, and our custom patch-level inference pipeline codes.
 
 ### Cell FMs Released Before 2024 Aug.
 
