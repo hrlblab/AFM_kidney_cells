@@ -45,7 +45,7 @@ We detail the evaluated SOTA cell FMs, their architectures, post-processing meth
 | Year–Month | Model | Backbone | Post-processing | Original Repo | Model Paper | Custom Patch-Level Inference | Our Work |
 |-------------|--------|----------------------|-----------------|----------------|--------------|----------------------------------|------------------|
 | 2025 Jan | **CellViT++** | ViT (HIPT, SAM, Virchow, UNI) | HoVer-Net | [Link](https://github.com/TIO-IKIM/CellViT-Plus-Plus) | [arXiv](https://arxiv.org/abs/2501.05269) | [CellViT++ Patch Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287)|
-| 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [bioRxiv](#) | [Cellpose-SAM Inference (updating)](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287)|
+| 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1) | [Cellpose-SAM Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287)|
 
 
 ## ⚙️ CellFMs-HITL Data Enrichment Illustration
