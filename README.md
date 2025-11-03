@@ -31,19 +31,21 @@ We detail the evaluated SOTA cell FMs, their architectures, post-processing meth
 
 ### Cell FMs Released Before 2024 Aug.
 
-| Year–Month | Model | Backbone | Post-processing | Original Repo | Model Paper | Patch-Level Pipeline | Our Work |
-|-------------|--------|-----------|-----------------|----------------|--------------|----------------------|------------------|
-| 2022 Mar | **StarDist (Histo.)** | U-Net | Star-convex Polygon | [Link](#) | [ISBI 2022](#) | [StarDist Inference](#) · [QuPath Plugin](#) | [Medical Imaging 2025](#)<br>[Nature Communications Medicine 2025](#) |
-| 2022 Nov | **Cellpose** | U-Net | GradientFlow Tracking | [Link](#) | [Nature Methods 2021](#) | [Cellpose Inference](#) | [Medical Imaging 2025](#)<br>[Nature Communications Medicine 2025](#) |
-| 2023 Oct | **CellViT** | ViT (HIPT, SAM) | HoVer-Net | [Link](#) | [Medical Image Analysis 2023](#) | [CellViT Inference](#) | [Medical Imaging 2025](#)<br>[Nature Communications Medicine 2025](#) |
+| Year–Month | Model                 | Backbone        | Post-processing       | Original Repo                                 | Model Paper                                                                                  | Patch-Level Pipeline                         | Our Work                                                                                                               |
+|-------------|----------------------|-----------------|-----------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| 2022 Mar   | **StarDist (Histo.)** | U-Net           | Star-convex Polygon   | [Link](https://github.com/stardist/stardist)  | [ISBI 2022](https://arxiv.org/abs/2203.02284)                                                | [StarDist Inference](#) · [QuPath Plugin](#) | [Medical Imaging 2025](https://arxiv.org/abs/2408.06381)<br>[Nat. Commun. Med. 2025](https://arxiv.org/abs/2411.00078) |
+| 2022 Nov   | **Cellpose**          | U-Net           | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [Nat. Methods 2021](https://www.nature.com/articles/s41592-020-01018-x)                      | [Cellpose Inference](#)                      | (same as above)                                                                                                       |
+| 2023 Oct   | **CellViT**           | ViT (HIPT, SAM) | HoVer-Net             | [Link](https://github.com/TIO-IKIM/CellViT)   | [Med. Image Anal. 2023](https://www.sciencedirect.com/science/article/pii/S1361841524000689) | [CellViT Inference](#)                       | (same as above)                                                                                                       |
+
+
 
 
 ### Cell FMs Released 2024 Aug. – 2025 Aug.
 
 | Year–Month | Model | Backbone | Post-processing | Original Repo | Model Paper | Custom Patch-Level Inference | Our Work |
 |-------------|--------|----------------------|-----------------|----------------|--------------|----------------------------------|------------------|
-| 2025 Jan | **CellViT++** | ViT (HIPT, SAM, Virchow, UNI) | Star-convex Polygon | [Link](#) | [arXiv](#) | [CellViT++ Patch Inference](#) | [Medical Imaging 2026](#)|
-| 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](#) | [bioRxiv](#) | [Cellpose-SAM Inference](#) | [Medical Imaging 2026](#)|
+| 2025 Jan | **CellViT++** | ViT (HIPT, SAM, Virchow, UNI) | HoVer-Net | [Link](https://github.com/TIO-IKIM/CellViT-Plus-Plus) | [arXiv](https://arxiv.org/abs/2501.05269) | [CellViT++ Patch Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287)|
+| 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [bioRxiv](#) | [Cellpose-SAM Inference (updating)](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287)|
 
 
 ## ⚙️ CellFMs-HITL Data Enrichment Illustration
