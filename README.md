@@ -2,7 +2,11 @@
 
 >**TL;DR**: A human-in-the-loop (HITL) framework that integrates **multiple cell foundation models** (FMs) for nuclei instance segmentation, efficiently combining **model pedictions with minimal expert annotation** on challenging cases to **enhance performance** and streamline pathology workflows.
 
+
+
 ## 📢 Latest Updates
+An ongoing project updating new cell foundation models, evaluations, and nuclei segmentation performance (demonstrated on kidney pathology).
+
 🔥 🔥 🔥 Last Updated on 2025.11.1 🔥 🔥 🔥
 - **[2025.10.30]** Our latest paper [*“Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models”*](https://arxiv.org/abs/2510.01287) has been accepted for **Medical Imaging 2026** *(New FMs assessment — Cell FMs released by 2025 Aug.)*  
 - **[2025.10.14]** Our journal paper [*“Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment”*](https://arxiv.org/abs/2411.00078) has been accepted for **Nature Communications Medicine** *(Data-efficient CellFMs-HITL framework — demonstrated in kidney pathology on Cell FMs released by 2024 Aug.)*  
