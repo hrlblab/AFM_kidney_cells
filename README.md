@@ -19,9 +19,9 @@
 - **Cell AI FMs Fine-tuning Support:**  Includes patch-level fine-tuning scripts for domain-specific model enhancement (e.g., kidney pathology).
   
 ## 🚀 CellFM-HITL Workflow
-- Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-cell-fms-inference-pipeline-model-summary)) 
+- Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-cell-fms-inference-pipeline--model-summary))
 
-- Step 2: **Multi-FMs Performance Rating and Data Enrichment** ([CellFMs-HITL Data Enrichment Illustration](#-cellfms-hitl-data-enrichment-illustration))  
+- Step 2: **Multi-FMs Performance Rating and Data Enrichment** ([CellFMs-HITL Data Enrichment Illustration](#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration))  
 
 - Step 3: **Cell FMs Continuous Fine-Tuning with Scalably Enriched Data** ([Continuous Model Fine-Tuning with Enriched Data](#-continuous-model-fine-tuning-with-enriched-data))  
 
