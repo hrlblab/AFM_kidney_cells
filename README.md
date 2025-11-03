@@ -6,7 +6,7 @@
 🔥 🔥 🔥 Last Updated on 2025.11.1 🔥 🔥 🔥
 - **[2025.10.30]** Our latest paper [*“Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models”*](https://arxiv.org/abs/2510.01287) has been accepted for **Medical Imaging 2026** *(New FMs assessment — Cell FMs released by 2025 Aug.)*  
 - **[2025.10.14]** Our journal paper [*“Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment”*](https://arxiv.org/abs/2411.00078) has been accepted for **Nature Communications Medicine** *(Data-efficient CellFMs-HITL framework — demonstrated in kidney pathology on Cell FMs released by 2024 Aug.)*  
-- **[2024.10.27]** Our first paper [*“Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology”*](https://arxiv.org/abs/2408.06381) has been accepted for **Medical Imaging 2025** *(First large-scale Cell FMs assessment in Kidney Pathology— Cell FMs released by 2024 Aug.)*
+- **[2024.10.27]** Our first paper [*“Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology”*](https://arxiv.org/abs/2408.06381) has been accepted for **Medical Imaging 2025** *(First large-scale FMs assessment in Kidney Pathology— Cell FMs released by 2024 Aug.)*
 
 > 🧩 Annotation preparation for the **2nd KPI Challenge** is currently in progress.
 
@@ -19,11 +19,11 @@
 - **Cell AI FMs Fine-tuning Support:**  Includes patch-level fine-tuning scripts for domain-specific model enhancement (e.g., kidney pathology).
   
 ## 🚀 CellFM-HITL Workflow
-- Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-inference-pipeline-model-summary)) 
+- Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-cell-fms-inference-pipeline-model-summary)) 
 
-- Step 2: **Multi-FMs Performance Rating and Data Enrichment** ([CellFMs-HITL Data Enrichment Illustration](#))  
+- Step 2: **Multi-FMs Performance Rating and Data Enrichment** ([CellFMs-HITL Data Enrichment Illustration](#-cellfms-hitl-data-enrichment-illustration))  
 
-- Step 3: **Cell FMs Continuous Fine-Tuning with Scalably Enriched Data** ([Continuous Model Fine-Tuning with Enriched Data](#))  
+- Step 3: **Cell FMs Continuous Fine-Tuning with Scalably Enriched Data** ([Continuous Model Fine-Tuning with Enriched Data](#-continuous-model-fine-tuning-with-enriched-data))  
 
 
 ## 🔬 Cell FMs Inference Pipeline & Model Summary
