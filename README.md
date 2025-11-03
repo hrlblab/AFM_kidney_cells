@@ -8,18 +8,18 @@ An ongoing project updating new cell foundation models, evaluations, and nuclei 
 
 🔥 🔥 🔥 Last Updated on 2025.11.3 🔥 🔥 🔥
 - **[2025.10.30]** Our latest paper [*“Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models”*](https://arxiv.org/abs/2510.01287) has been accepted for **Medical Imaging 2026** *(New FMs assessment — Cell FMs released by 2025 Aug.)*  
-- **[2025.10.14]** Our journal paper [*“Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment”*](https://arxiv.org/abs/2411.00078) has been accepted for **Nature Communications Medicine** *(Data-efficient CellFMs-HITL framework — demonstrated in kidney pathology on Cell FMs released by 2024 Aug.)*  
+- **[2025.10.14]** Our journal paper [*“Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment”*](https://arxiv.org/abs/2411.00078) has been accepted for **Nature Communications Medicine 2025** *(Data-efficient CellFMs-HITL framework — demonstrated in kidney pathology on Cell FMs released by 2024 Aug.)*  
 - **[2024.10.27]** Our first paper [*“Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology”*](https://arxiv.org/abs/2408.06381) has been accepted for **Medical Imaging 2025** *(First large-scale FMs assessment in Kidney Pathology— Cell FMs released by 2024 Aug.)*
 
 > 🧩 Annotation preparation for the **2nd KPI Challenge** is currently in progress.
 
 ## 🎯 Highlights
 
-- **Perform SOTA Cell AI FMs Assessment:**  Ready-to-use patch-level inference pipelines for evaluating cell nuclei instance segmentation.
+- **Perform SOTA Cell AI FMs Assessment:**  Ready-to-use patch-level inference pipelines for cell nuclei instance segmentation.
 
-- **Multi-FMs-based HITL Data Enrichment Framework:**  Scalably enriches high-quality labeled nuclei image patches with cell FMs, boosting model performance while reducing expert annotation effort.
+- **Multi-FMs-based HITL Data Enrichment Framework:**  Scalably enriches high-quality labeled nuclei image patches with cell FMs, boosting performance while reducing expert annotation effort.
 
-- **Cell AI FMs Fine-tuning Support:**  Includes patch-level fine-tuning codebases for domain-specific model enhancement (e.g., kidney pathology).
+- **Cell AI FMs Fine-tuning Support:**  Includes patch-level fine-tuning codebases for continous model enhancement.
   
 ## 🚀 CellFM-HITL Workflow
 - Step 1: **Individual Cell FMs Performance** ([Cell FMs Inference Pipeline & Model Summary](#-cell-fms-inference-pipeline--model-summary)).
