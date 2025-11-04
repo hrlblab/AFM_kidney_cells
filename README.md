@@ -4,7 +4,7 @@
 
 
 ## 📢 Latest Updates
-This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#continously-updating-histopathological-nuclei-segmentation-models).
+This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
 
 🔥 🔥 🔥 Last Updated on 2025.11.4 🔥 🔥 🔥
@@ -52,8 +52,11 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 |-------------|--------|----------------------|-----------------|----------------|--------------|----------------------------------|------------------|
 | 2025 Jan | **CellViT++** | ViT (HIPT, SAM, Virchow, UNI) | HoVer-Net | [Link](https://github.com/TIO-IKIM/CellViT-Plus-Plus) | [arXiv](https://arxiv.org/abs/2501.05269) | [CellViT++ Patch Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287) (Stage 3)|
 | 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1) | [Cellpose-SAM Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287) (Stage 3)|
+
 <br>
->🔥 Awesome histopathological nuclei segmentation FMs or Specialists are continuously updated here: [**Awesome Histopathological Nuclei Segmentation Models**](#continously-updating-histopathological-nuclei-segmentation-models).
+
+🔥 **Notes**:
+Awesome histopathological nuclei segmentation FMs or Specialists are continuously updated here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
 
 
