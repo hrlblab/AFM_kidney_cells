@@ -167,15 +167,21 @@ Our enriched labeled dataset comes from:
 
 
  ### This CellFM-HITL Assessment and Enhancement Framework can be Iterative.
+
 <p align="left">
   <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage3--Paper-SPIE-26'></a> 
 </p>
 
 
+- With newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”).
 
+- This framework **scalably acquiring and curating** labeled nuclei datasets in kidney histopathology
 
+<br>
 
-
+<p align="center">
+  <img src="assets/stage3_performance_rating.png" width="500">
+</p>
 
 ## Citation
 
