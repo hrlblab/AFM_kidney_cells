@@ -117,9 +117,11 @@ We currently provide fine-tuning codebases and models for our Stage 2 paper usin
 
 ## Results 
 
-[ ] updating and organizing arXiv figures and results with final versions 
+<p align="left">
+  <a href='https://arxiv.org/abs/2411.00078'><img src='https://img.shields.io/badge/Stage2--Paper-Nat.Comm.Med.-red'></a> 
+</p>
 
-### Model Performances
+### Model Performances 
 
 - Individual model predictions (**Cellpose, StarDist, CellViT**) are rated.
 
@@ -143,11 +145,11 @@ Our enriched labeled dataset comes from:
 
 ![](assets/experiments-settings.png)
 
-### Performance Validation
+### CellFM-HTML Performance Validation
 
-- Baselines: We evaluated each foundation model’s pre-trained weights on our hold-out test set.
+- Baselines: We evaluated each foundation model’s (Cellpose, StarDist, CellViT) pre-trained weights on our hold-out test set.
 
-- Comparison of F1-score across training/annotation strategies.
+- F1-score comparisons across training/annotation strategies are shown (below). Full metrics (F1, Precision, Recall) are provided in the [Table](assets/f1-recall-prec.png).
 
 <br>
 
@@ -155,15 +157,25 @@ Our enriched labeled dataset comes from:
   <img src="assets/results-f1.png" width="800">
 </p>
 
-<!-- <p align="center">
-  <img src="assets/f1-recall-prec.png" width="500">
-</p> --> 
 
-- Comparison of F1-score, Precision, Recall across training/annotation strategies are detailed in this [table](assets/f1-recall-prec.png).
+
+- Qualitative results. Areas of improvement highlighted by rectangles.
 
 <p align="center">
-  <img src="assets/Figure 8.pdf" width="800">
+  <img src="assets/qualitative.png" width="600">
 </p>
+
+
+ ### This CellFM-HITL Assessment and Enhancement Framework can be Iterative.
+<p align="left">
+  <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage3--Paper-SPIE-26'></a> 
+</p>
+
+
+
+
+
+
 
 ## Citation
 
