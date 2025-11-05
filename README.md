@@ -173,7 +173,7 @@ Our enriched labeled dataset comes from:
 </p>
 
 
-- With newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”).
+- With newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”). E.g., [CellFMs-HITL Data Enrichment Illustration#4](#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration).
 
 - This framework **scalably acquiring and curating** labeled nuclei datasets in kidney histopathology
 
