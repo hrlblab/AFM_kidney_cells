@@ -116,7 +116,54 @@ We currently provide fine-tuning codebases and models for our Stage 2 paper usin
 
 
 ## Results 
-- updating arXiv figures and results with final versions 
+
+[ ] updating and organizing arXiv figures and results with final versions 
+
+### Model Performances
+
+- Individual model predictions (**Cellpose, StarDist, CellViT**) are rated.
+
+- **Shared failure cases** across all models highlight **domain gaps in kidney pathology** and important for targeted fine-tuning.
+
+- Fusing the **"Good"** predictions from multiple FMs **enriches the labeled dataset** with less single-model bias and better generalization.
+
+<p align="center">
+  <img src="assets/performance_rating_results.png" width="800">
+</p>
+
+### Data Enrichement
+
+Our enriched labeled dataset comes from:
+
+- **Easy patches:** Foundation model-generated pseudo labels.
+- **Hard patches:** Pathologist-corrected shared failure cases
+- **Combined set:** Combination of easy and hard patches for balanced refinement.
+
+<br>
+
+![](assets/experiments-settings.png)
+
+### Performance Validation
+
+- Baselines: We evaluated each foundation model’s pre-trained weights on our hold-out test set.
+
+- Comparison of F1-score across training/annotation strategies.
+
+<br>
+
+<p align="center">
+  <img src="assets/results-f1.png" width="800">
+</p>
+
+<!-- <p align="center">
+  <img src="assets/f1-recall-prec.png" width="500">
+</p> --> 
+
+- Comparison of F1-score, Precision, Recall across training/annotation strategies are detailed in this [table](assets/f1-recall-prec.png).
+
+<p align="center">
+  <img src="assets/Figure 8.pdf" width="800">
+</p>
 
 ## Citation
 
