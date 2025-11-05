@@ -50,8 +50,8 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 
 | Year–Month | Model | Backbone | Post-processing | Original Repo | Model Paper | Custom Patch-Level Inference | Our Work |
 |-------------|--------|----------------------|-----------------|----------------|--------------|----------------------------------|------------------|
-| 2025 Jan | **CellViT++** | ViT (HIPT, SAM, Virchow, UNI) | HoVer-Net | [Link](https://github.com/TIO-IKIM/CellViT-Plus-Plus) | [arXiv](https://arxiv.org/abs/2501.05269) | [CellViT++ Patch Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287) (Stage 3)|
-| 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1) | [Cellpose-SAM Inference (updating)](#) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287) (Stage 3)|
+| 2025 Jan | **CellViT++** | ViT (HIPT, SAM, Virchow, UNI) | HoVer-Net | [Link](https://github.com/TIO-IKIM/CellViT-Plus-Plus) | [arXiv](https://arxiv.org/abs/2501.05269) | [CellViT++ Patch Inference (updating)](stage3_paper/cellvit-plusplus-inference-gpu) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287) (Stage 3)|
+| 2025 May | **Cellpose-SAM** | SAM | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [bioRxiv](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1) | [Cellpose-SAM Inference (updating)](stage3_paper/cellpose-sam-inference-gpu) | [Medical Imaging 2026](https://arxiv.org/abs/2510.01287) (Stage 3)|
 
 <br>
 
@@ -62,11 +62,39 @@ Awesome histopathological nuclei segmentation FMs or Specialists are continuousl
 
 ## ⚙️ CellFMs-HITL Data Enrichment Illustration
 
+**Motivation**: There is still limited understanding of AI/DL models’ performance in nuclei segmentation on complex organs (e.g., kidney). **How good are we? How can we improve it scalably?** 
+
+1. Large-scale, Diverse dataset for Evaluation 
+
+<p align="center">
+  <img src="assets/unexplored_dataset.png" width="800">
+</p>
+
+
+2. Less model bias and more generalizability — leveraging multiple cell FMs!
+
+<p align="center">
+  <img src="assets/performance_rating.png" width="770">
+</p>
+
+
+3. How can we efficiently improve them ? Our CellFM-HITL Data Enrichment.
+
+<p align="center">
+  <img src="assets/performance_enhancement.png" width="800">
+</p>
+
+4. This HITL framework can be iterative. See advances of CellFMs in our Stage 3 paper.
+<p align="center">
+  <img src="assets/stage3_performance.png" width="800">
+</p>
 
 
 ## 🔁 Continuous Model Fine-Tuning with Enriched Data
 
-Provides python codesfor patch-level cell FMs fine-tuning to improve model performance in domain-specific datasets (e.g., kidney pathology).
+We currently provide fine-tuning codebases and models for our Stage 2 paper using Cell FMs released before Aug 2024 (Cellpose, StarDist, CellViT). Patch-level fine-tuning support for newer Cell FMs will be added as part of our upcoming Stage 3 work.
+
+
 
 ## Results 
 - updating arXiv figures and results with final versions 
