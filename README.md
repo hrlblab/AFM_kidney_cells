@@ -2,6 +2,17 @@
 
 >**TL;DR**: We continuously **provide/update** patch-level class-agnostic **Cell AI foundation model (FMs)** inference and fine-tuning codebases for nuclei instance segmentation in histopathology, along with a **Human-in-the-Loop (HITL)** framework that unifies multiple Cell FMs. The framework also efficiently combines **model pedictions with minimal expert annotation** on challenging cases to **enhance performance** and streamline pathology workflows.
 
+<p align="center">
+  <a href="#-latest-updates">Latest Updates</a> •
+  <a href="#-highlights">Highlights</a> •
+  <a href="#-cellfm-hitl-workflow-overview">Workflow</a> •
+  <a href="#-cell-fms-inference-pipeline--model-summary">Model Summary</a> •
+  <a href="#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration">Data Enrichment</a> •
+  <a href="#-continuous-model-fine-tuning-with-enriched-data">Fine-Tuning</a> •
+  <a href="#results">Results</a> •
+  <a href="#citation">Citation</a> •
+  <a href="#awesome-histopathological-nuclei-segmentation-models">Awesome Cell FMs List</a>
+</p>
 
 ## 📢 Latest Updates
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
