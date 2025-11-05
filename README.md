@@ -3,7 +3,7 @@
 >**TL;DR**: We continuously **provide/update** patch-level class-agnostic **Cell AI foundation model (FMs)** inference and fine-tuning codebases for nuclei instance segmentation in histopathology, along with a **Human-in-the-Loop (HITL)** framework that unifies multiple Cell FMs. The framework also efficiently combines **model pedictions with minimal expert annotation** on challenging cases to **enhance performance** and streamline pathology workflows.
 
 <p align="center">
-  <a href='https://arxiv.org/abs/2408.06381'><img src='https://img.shields.io/badge/Stage-1--Paper-Arxiv-red'></a> •
+  <a href='https://arxiv.org/abs/2408.06381'><img src='https://img.shields.io/badge/Stage1--Paper-Arxiv-red'></a> •
   <a href='https://arxiv.org/abs/2411.00078'><img src='https://img.shields.io/badge/Stage-2--Paper-Arxiv-red></a> •
   <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage-3--Paper-Arxiv-red></a> 
 </p>
