@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### Basic Usage
 
-1. **Edit the script** (`cellpose_gpu.py`) to set your image directory and output directory:
+1. ** Configure Input and Output Paths** (`cellpose_gpu.py`):
 
 ```python
 # Path to image directory
@@ -113,8 +113,6 @@ cellpose_model.inference_instance_loop(
 ### Example Run
 
 We provide example PAS patches (512x512) in the [**examples**](../examples/) folder. 
-
-<!-- ![Example PAS patch](../examples/2-WXA-FFS-PH-20220322-01(2)%20rat%20kindey%20PAS_patch_5120_47616.png) -->
 
 <p align="left">
   <img src="../examples/2-WXA-FFS-PH-20220322-01(2)%20rat%20kindey%20PAS_patch_5120_47616.png" width="300">
