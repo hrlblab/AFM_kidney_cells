@@ -1,123 +1,202 @@
-# cellpose-inference-gpu
-A customized GPU inference code for cell nuclei foundation model - Cellpose
-The main script used for performing inference on a directory of PNG files using the Cellpose model: 
-```
-cellpose_gpu.py
-```
+# Cellpose GPU Inference
 
-## Reference
-
-- Cellpose paper [link](https://www.nature.com/articles/s41592-020-01018-x)
-- Cellpose github [link](https://github.com/MouseLand/cellpose)
-- This repo is based on the paper: [Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology](https://arxiv.org/abs/2408.06381)
+A customized patch-level GPU inference code using the Cellpose 2.0 model. This script processes directories of PNG images and performs instance or binary segmentation with configurable parameters.
 
 
 ## Requirements
 
-Before running the script, make sure you have the following Python packages installed:
-- `numpy`
-- `cellpose`
-- `PIL` (Pillow)
-- `glob`
-- `os`
-- `tqdm`
-- `shutil`
-- `random`
-- `time`
-- `cv2` (OpenCV)
-- `pickle`
-- `matplotlib`
+### System Requirements
 
-You can install the required packages using pip:
+- Python 3.9 or higher (we use 3.9)
+- CUDA-compatible GPU (recommended) or CPU
+- NVIDIA GPU drivers (for GPU support)
+
+## Installation
+
+Ensure successful loading packages/librareis of `cellpose_gpu.py`. Detail versions like `cellpose`, etc can be found in `environment.yml` or `requirements.txt`
+
+### Option 1: Using Conda (Recommended)
+
+Create a conda environment from the provided `environment.yml`:
 
 ```bash
-pip install numpy cellpose pillow glob2 tqdm opencv-python matplotlib
+conda env create -f environment.yml
+conda activate cellpose
+```
+
+### Option 2: Using pip (Recommended)
+
+Install the required packages:
+
+```bash
+conda create -n cellpose python=3.9
+conda activate cellpose 
+
+pip install numpy cellpose pillow opencv-python
+```
+
+**Note**: For GPU support, you'll also need PyTorch with CUDA. Install PyTorch separately based on your CUDA version:
+
+```bash
+# Example for CUDA 11.3
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu113
+```
+
+### Option 3: Install from requirements.txt
+
+```bash
+conda create -n cellpose python=3.9
+conda activate cellpose 
+
+pip install -r requirements.txt
 ```
 
 ## Usage
 
-### 1. Set Up the Paths
+### Basic Usage
 
-You need to modify the script to set the paths according to your directory structure:
-
-- **`base_image_dir`**: The base directory containing multiple folders of PNG files.
-- **`png_subdir_name`**: The specific folder name within the base directory that contains the PNG files you want to process.
-- **`output_predictions_dir`**: The directory where the prediction results will be saved.
-
-### 2. Run the Script
-
-To execute the script, run:
-
-```bash
-python cellpose_inference.py
-```
-
-### 3. Output
-
-The script will save different types of outputs based on the **specified suffix**:
-
-- **Contours Image (`_contours.png`)**: The script overlays contours of detected instances on the original image and saves it as a `.png` file.
-- **Binary Mask (`_binary.png`)**: If specified, the script saves a binary mask of the detected instances as a grayscale image.
-- **Cell Probability Map (`_cellprob.npy`)**: The script can save the cell nuclei probability map as a `.npy` file.
-- **Instance Map (`_contours.npy`)**: The instance segmentation map is saved as a `.npy` file.
-
-### 4. Customizing the Inference Process
-
-You can customize various aspects of the inference process, such as:
-
-- **Model Type**: The model type can be set to `"nuclei"` or any other supported Cellpose model.
-- **Channels**: Customize the channels used for inference (e.g., `[0, 0]` for grayscale).
-- **Diameter**: Specify the expected diameter of the objects (e.g., 17 pixels for nuclei).
-- **Flow Threshold**: Set the flow threshold for mask generation.
-- **Minimum Size**: Specify the minimum number of pixels per mask.
-
-### 5. Performance and Runtime
-
-The script outputs the total runtime after processing all images. This can help you estimate the performance for larger datasets.
-
-### 6. Error Handling
-
-If an IO error occurs while processing an image, the script will output an error message indicating the problematic file.
-
-## Example
-
-Here is an example of how the script might be used:
+1. **Edit the script** (`cellpose_gpu.py`) to set your image directory and output directory:
 
 ```python
-# Base directory containing multiple folders of PNG files
-base_image_dir = '/path/to/base/folder'
+# Path to image directory
+image_dir = '/path/to/your/images'
+image_files = glob.glob(os.path.join(image_dir, '*.png'))
 
-# Subdirectory within the base directory that contains the PNG files
-png_subdir_name  = 'subfolder'
-
-# Output directory for predictions
-output_predictions_dir = '/path/to/result'
-
-# Full path to the folder containing the PNG files
-png_folder_path = os.path.join(base_image_dir, png_subdir_name)
-
-# Create the output directory if it does not exist
-if not os.path.exists(output_predictions_dir):
-    os.makedirs(output_predictions_dir)
-
-# Initialize the CellposeProcessor
-cp = CellposeProcessor(use_gpu=True, model_type="nuclei")
-
-# Retrieve all PNG files from the specified directory
-image_files = glob.glob(os.path.join(png_folder_path, '*.png'))
-
-# Run inference and save the results
-cp.inference_instance_loop(image_files=image_files, output_dir=output_predictions_dir, suffix=['_contours.png'])
-
-# Output the total runtime
-print(f'run time is {cp.run_time}')
+# Output directory
+output_dir = '/path/to/output'
+os.makedirs(output_dir, exist_ok=True)
 ```
 
-This example demonstrates setting up the directories, running the inference, and saving the results.
+2. **Run the script**:
+
+```bash
+python cellpose_gpu.py
+```
+
+### Programmatic Usage
+
+You can also use the `CellposeProcessor` class in your own code:
+
+```python
+from cellpose_gpu import CellposeProcessor
+import glob
+import os
+
+# Initialize the processor
+cellpose_model = CellposeProcessor(use_gpu=True, model_type="nuclei")
+
+# Get image files
+image_files = glob.glob(os.path.join(image_dir, '*.png'))
+
+# Run inference
+cellpose_model.inference_instance_loop(
+    image_files=image_files,
+    output_dir=output_dir,
+    flow_threshold=0.8,
+    min_size=15,
+    binary=False
+)
+```
+
+
+### Output Files
+
+#### Instance Segmentation Mode (`binary=False`)
+
+- **`*_contours.png`**: Original image with green contours overlaid on detected instances
+- **`*_contours.npy`**: NumPy array containing the instance segmentation mask (0=background, 1,2,3...=instance labels)
+
+#### Binary Segmentation Mode (`binary=True`)
+
+- **`*_grayscale.png`**: Binary mask saved as grayscale image (white=cell, black=background)
+
+### Example Run
+
+We provide example PAS patches (512x512) in the [**examples**](../examples/) folder. 
+
+<!-- ![Example PAS patch](../examples/2-WXA-FFS-PH-20220322-01(2)%20rat%20kindey%20PAS_patch_5120_47616.png) -->
+
+<p align="left">
+  <img src="../examples/2-WXA-FFS-PH-20220322-01(2)%20rat%20kindey%20PAS_patch_5120_47616.png" width="300">
+</p>
+
+1. Paths and Output Dir:
+```python
+# Path to image directory
+image_dir = '/path/to/stage1_paper/examples'
+image_files = glob.glob(os.path.join(image_dir, '*.png'))
+
+# Output directory
+output_dir = '/path/to/stage1_paper/cellpose-inference-gpu/result'
+os.makedirs(output_dir, exist_ok=True)
+```
+2. Run the script
+```bash
+python cellpose_gpu.py
+```
+
+3a. Instance Segmentation (Default)
+<p align="left">
+  <img src="result/2-WXA-FFS-PH-20220322-01(2) rat kindey PAS_patch_5120_47616_contours.png" width="300">
+</p>
+
+
+3b. Binary Segmentation (if `binary=True`)
+<p align="left">
+  <img src="result/2-WXA-FFS-PH-20220322-01(2) rat kindey PAS_patch_5120_47616_grayscale.png" width="300">
+</p>
+
+
+## Parameters
+
+### CellposeProcessor Initialization
+
+- `use_gpu` (bool): Enable GPU acceleration (default: `True`)
+- `model_type` (str): Cellpose model type, e.g., `"nuclei"` or `"cyto"` (default: `"nuclei"`)
+
+### inference_instance_loop Parameters
+
+- `image_files` (list): List of paths to PNG image files
+- `output_dir` (str): Directory where results will be saved
+- `binary` (bool): If `True`, saves binary masks; if `False`, saves instance segmentation with contours (default: `False`)
+- `flow_threshold` (float): Maximum allowed error of flows for each mask (default: `0.4`)
+  - Lower values = stricter mask quality
+  - we use `0.8` for our kidney cell datasets for better results.
+- `min_size` (int): Minimum number of pixels per mask (default: `15`)
+  - Set to `-1` to disable minimum size filtering
+
+
 
 ## License
 
 This script is provided under the MIT License. Please see the LICENSE file for details.
-```
 
-You can use this content as your README file to provide clear instructions on how to use the script for performing inference using the Cellpose model.
+## Citation
+
+If you find this repository useful, please consider giving a ⭐ and citing our papers:
+
+```bibtex
+@inproceedings{guo2025assessment,
+  title={Assessment of cell nuclei AI foundation models in kidney pathology},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  booktitle={Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment},
+  volume={13409},
+  pages={76--82},
+  year={2025},
+  organization={SPIE}
+}
+
+@article{guo2024good,
+  title={How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  journal={arXiv preprint arXiv:2411.00078},
+  year={2024}
+}
+
+@article{wang2025evaluating,
+  title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
+  author={Wang, Runchen and Guo, Junlin and Lu, Siqi and Deng, Ruining and Lu, Zhengyi and Zhu, Yanfan and Yang, Yuechen and Qu, Chongyu and Wang, Yu and Zhao, Shilin and others},
+  journal={arXiv preprint arXiv:2510.01287},
+  year={2025}
+}
+```

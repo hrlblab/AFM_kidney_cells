@@ -3,14 +3,7 @@ from cellpose import models
 from PIL import Image
 import glob as glob
 import os
-from tqdm import tqdm
-import shutil
-import random
-import time
 import cv2
-from typing import Set
-import pickle
-import matplotlib.pyplot as plt
 
 class CellposeProcessor:
 
@@ -79,69 +72,55 @@ class CellposeProcessor:
         """
 
         # binary map
-        if image_array.ndim != 3:
-            image = Image.fromarray(np.stack((image_array, image_array, image_array), axis=-1))
+        if image_array.ndim == 2:
+            binary = np.stack((image_array, image_array, image_array), axis=-1) > 0
+            image = Image.fromarray((binary * 255).astype(np.uint8))
             image.save(output_dir)
 
-    def _sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))
-
-    def inference_instance_loop(self, image_files, output_dir, suffix):
+    def inference_instance_loop(self, image_files, output_dir, binary=False, flow_threshold=0.4, min_size=15):
         """
         Perform inference on a list of PNG images and save results to the specified output directory.
         
         :param image_files: List of file paths to PNG images. Example: ['/directory/to/1.png', '/directory/to/2.png', ... ]
         :param output_dir: Directory where the results will be saved.
-        :param suffix: Suffixes indicating the type of results to save. Can be a single string (e.g., 'binary') or a list of strings.
+        :param binary: Indicating the type of results to save. Can be a semantic (binary=True) or  instance (binary=False) level
+        :param  flow_threshold: the maximum allowed error of the flows for each mask. The default is 0.4
+        :param  min_size: minimum number of pixels per mask, can turn off with -1 (default 15)
+
+
+                      
         :return: None
         """
         for image_file in image_files:
             try:
                 image = self.load_image(image_file)
-                mask, flows, _, _ = self.model_eval(image, channels=[0, 0], diameter=None, flow_threshold=0.8, min_size=15,
+                mask, flows, _, _ = self.model_eval(image, channels=[0, 0], diameter=None, flow_threshold=flow_threshold, min_size=min_size,
                                                     invert=True)
 
                 basename = os.path.basename(image_file)
 
-                # If the suffix is a string and contains 'binary', save the binary mask as a grayscale image
-                if isinstance(suffix, str) and 'binary' in suffix:
-                    output = os.path.join(output_dir, basename.replace(".png", suffix))
+                # save the binary mask as a grayscale image
+                if binary:
+                    output = os.path.join(output_dir, basename.replace(".png", '_grayscale.png'))
                     self.save_plots_grayscale(mask, output)
+                
+                # save the instance level output (instance npy mask and contour overlay visual)
+                else:
+                    unique_labels = np.unique(mask)
+                    unique_labels = unique_labels[unique_labels != 0]
 
-                 # If the suffix is a list of strings, iterate over each suffix and save different results
-                elif isinstance(suffix[0], str):
-                    for s in suffix:
-                        output = os.path.join(output_dir, basename.replace(".png", s))
+                    # get contours of instance predictions
+                    for label in unique_labels:
+                        binary_mask = np.where(mask == label, 255, 0).astype(np.uint8)
+                        contours, _ = cv2.findContours(binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-                        # save cell probability map
-                        if s == '_cellprob.npy':
-                            mask_nonzero = np.where(mask > 0, 1, 0)
-                            P = self._sigmoid(flows[2]) * mask_nonzero
+                        cv2.drawContours(image, contours, -1, (0, 255, 0), 3)
+                    
+                    output = os.path.join(output_dir, basename.replace(".png", '_contours.png'))
+                    Image.fromarray(image).save(output)
 
-                            np.save(output.replace(".png", ".npy"), P)
-
-                        # save binary map
-                        if s == '_binary.png':
-                            binary_map = (mask > 0).astype(np.uint8)
-                            self.save_plots_grayscale(binary_map * 255, output)
-
-                        # save contours (png format) and instance map (npy format)
-                        if s == '_contours.png':
-
-                            unique_labels = np.unique(mask)
-                            unique_labels = unique_labels[unique_labels != 0]
-
-                            # get contours of instance predictions
-                            for label in unique_labels:
-                                binary_mask = np.where(mask == label, 255, 0).astype(np.uint8)
-                                contours, _ = cv2.findContours(binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-                                cv2.drawContours(image, contours, -1, (0, 255, 0), 3)
-                            
-                            Image.fromarray(image).save(output)
-
-                            # save instance map as .npy File
-                            np.save(output.replace(".png", ".npy"), mask)
+                    # save instance map as .npy File
+                    np.save(output.replace(".png", ".npy"), mask)
 
             except Exception as e:
                 # Handle any IO errors that occur during processing
@@ -150,31 +129,22 @@ class CellposeProcessor:
 
 if __name__ == "__main__":
     
-    # The base directory containing multiple folders of PNG files.
-    base_image_dir = '/path/to/base/folder'
+    # Path/to/image(png)/directory
+    image_dir = '/path/to/AFM_kidney_cells/stage1_paper/examples'
+    image_files = glob.glob(os.path.join(image_dir, '*.png'))
 
-    # Subdirectory within the base directory that contains the PNG files
-    png_subdir_name  = 'subfolder'
+    # Output directory 
+    output_dir = '/path/to/AFM_kidney_cells/stage1_paper/cellpose-inference-gpu/result'
+    os.makedirs(output_dir, exist_ok=True)
 
-    # Output directory for predictions
-    output_predictions_dir = '/path/to/result'
+    # cellpose model init 
+    cellpose_model = CellposeProcessor(use_gpu=True, model_type="nuclei")
+
+    # flow_thresh with 0.8 seems to be better for our kidney dataset 
+    cellpose_model.inference_instance_loop(image_files=image_files, 
+                                            output_dir=output_dir, 
+                                            flow_threshold=0.8, 
+                                            binary=False)  # binary=True (for semantic seg.)
     
-    # Full path to the folder containing the PNG files
-    png_folder_path = os.path.join(base_image_dir, png_subdir_name)
 
-    # Create the output directory if it does not exist
-    if not os.path.exists(output_predictions_dir):
-        os.makedirs(output_predictions_dir)
-        
-    # model
-    cp = CellposeProcessor(use_gpu=True, model_type="nuclei")
-    cp.time_start = time.time()
 
-    # Retrieve all PNG files from the specified directory
-    image_files = glob.glob(os.path.join(png_folder_path, '*.png'))
-    
-    cp.inference_instance_loop(image_files=image_files, output_dir=output_predictions_dir,
-                                   suffix=['_contours.png'])
-
-    cp.run_time = time.time() - cp.time_start
-    print(f'run time is {cp.run_time}')
