@@ -146,7 +146,7 @@ We currently provide fine-tuning codebases and models for our Stage 2 paper usin
   <img src="assets/performance_rating_results.png" width="800">
 </p>
 
-### Data Enrichement
+### Data Enrichement Strategies
 
 Our enriched labeled dataset comes from:
 
@@ -178,9 +178,10 @@ Our enriched labeled dataset comes from:
   <img src="assets/qualitative.png" width="600">
 </p>
 
-#### Take-away from our CellFM-HITL Asessment and Enrichment Results
-- From the results above, cell nuclei segmentation in kidney pathology still requires improvement with more organ-targeted FMs. For the **baseline evaluation**, CellViT achieves the highest baseline performance, with an F1 score of 0.78.
-- Fine-tuning with **enriched data** improves all three models, with StarDist achieving the highest F1 score of 0.82. In this case, the **combination** of the <ins>foundation model–generated pseudo-labels</ins> and <ins>a subset of pathologist-corrected ``hard”</ins> patches yields consistent performance gains across all models.
+#### Take-away from our CellFM-HITL Asessment and Annotation Enrichment
+- **Baseline performance evaluation**, CellViT achieves the highest F1 score of 0.78. Kidney-targeted FMs still required.
+- **Fine-tuning with enriched data** improves all three models, with StarDist achieving the highest F1 score of 0.82. 
+- **Annotation Enrichment**: We found the **combination** of the <ins>foundation model–generated pseudo-labels</ins> and <ins>a subset of pathologist-corrected hard patches</ins> yields consistent performance gains across all models.
 
  ### This CellFM-HITL Assessment and Enhancement Framework can be Iterative.
 
