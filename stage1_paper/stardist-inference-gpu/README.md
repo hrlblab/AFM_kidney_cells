@@ -1,5 +1,5 @@
 # StarDist GPU Inference
-A customized GPU inference pipeline for cell nuclei foundation model - StarDist (Histo.). The main script is `stardist_gpu.py`.
+A patch-level GPU inference code using the StarDist (Histo.). This script processes directories of PNG images and performs instance or binary segmentation with configurable parameters. The main script is `stardist_gpu.py`.
 
 ## Requirements
 
@@ -124,7 +124,42 @@ python stardist_gpu.py
 </p>
 
 
-3b. Binary Segmentation (if `binary=True`)
+3b. Binary Segmentation (if `BINARY=True`)
 <p align="left">
   <img src="result/2-WXA-FFS-PH-20220322-01(2) rat kindey PAS_patch_5120_47616_grayscale.png" width="300">
 </p>
+
+
+## License
+
+This script is provided under the MIT License. Please see the LICENSE file for details.
+
+## Citation
+
+If you find this repository useful, please consider giving a ⭐ and citing our papers:
+
+```bibtex
+@inproceedings{guo2025assessment,
+  title={Assessment of cell nuclei AI foundation models in kidney pathology},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  booktitle={Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment},
+  volume={13409},
+  pages={76--82},
+  year={2025},
+  organization={SPIE}
+}
+
+@article{guo2024good,
+  title={How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  journal={arXiv preprint arXiv:2411.00078},
+  year={2024}
+}
+
+@article{wang2025evaluating,
+  title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
+  author={Wang, Runchen and Guo, Junlin and Lu, Siqi and Deng, Ruining and Lu, Zhengyi and Zhu, Yanfan and Yang, Yuechen and Qu, Chongyu and Wang, Yu and Zhao, Shilin and others},
+  journal={arXiv preprint arXiv:2510.01287},
+  year={2025}
+}
+```

@@ -21,7 +21,7 @@ Create a conda environment from the provided `environment.yml`:
 
 ```bash
 conda env create -f environment.yml
-conda activate cellpose
+conda activate <env_name>
 ```
 
 ### Option 2: Using pip (Recommended)
@@ -29,8 +29,8 @@ conda activate cellpose
 Install the required packages:
 
 ```bash
-conda create -n cellpose python=3.9
-conda activate cellpose 
+conda create -n <env_name> python=3.9
+conda activate <env_name> 
 
 pip install numpy cellpose pillow opencv-python
 ```
@@ -45,8 +45,8 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu113
 ### Option 3: Install from requirements.txt
 
 ```bash
-conda create -n cellpose python=3.9
-conda activate cellpose 
+conda create -n <env_name> python=3.9
+conda activate <env_name> 
 
 pip install -r requirements.txt
 ```
