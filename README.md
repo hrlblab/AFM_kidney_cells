@@ -9,30 +9,42 @@
 </p>
 
 <p align="center">
-  <a href="#-latest-updates">Latest Updates</a> •
   <a href="#-highlights">Highlights</a> •
   <a href="#-cellfm-hitl-workflow-overview">Workflow</a> •
   <a href="#-cell-fms-inference-pipeline--model-summary">Model Summary</a> •
   <a href="#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration">Data Enrichment</a> •
   <a href="#-continuous-model-fine-tuning-with-enriched-data">Fine-Tuning</a> •
   <a href="#results">Results</a> •
-  <a href="#citation">Citation</a> •
-  <a href="#awesome-histopathological-nuclei-segmentation-models">Awesome Cell FMs List</a>
+  <a href="#citation">Citation</a> 
 </p>
 
-
-
-## 📢 Latest Updates
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
+## 🔥 Last Updated: 2025.11.05
 
-🔥 🔥 🔥 Last Updated on 2025.11.5 🔥 🔥 🔥
-- **[2025.11.05]** Patch-level Inference Codes for Stage 1 work (**CellViT, StarDist, Cellpose**) ready at [Table](#-cell-fms-inference-pipeline--model-summary) and folder [stage1_paper](stage1_paper).
-- **[2025.10.30]** (**Stage 3 Conf. Paper**) **[*“Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models”*](https://arxiv.org/abs/2510.01287)** has been accepted for **Medical Imaging 2026** *(New FMs assessment — Cell FMs released by 2025 Aug.)*  
-- **[2025.10.14]** (**Stage 2 Journal Paper**) **[*“Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment”*](https://arxiv.org/abs/2411.00078)** has been accepted for **Nature Communications Medicine 2025** *(Data-efficient CellFMs-HITL framework — demonstrated in kidney pathology on Cell FMs released by 2024 Aug.)*  
-- **[2024.10.27]** (**Stage 1 Conf. Paper**) **[*“Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology”*](https://arxiv.org/abs/2408.06381)** has been accepted for **Medical Imaging 2025** *(First large-scale FMs assessment in Kidney Pathology— Cell FMs released by 2024 Aug.)*
 
-> 🧩 Annotate/Curated Dataset preparation for the **2nd KPI Challenge** is currently in progress.
+- **[2025.11.05]** Patch-level inference codes for Stage 1 models (**CellViT, StarDist, Cellpose**) are available in:  
+  → [Model Summary Table](#-cell-fms-inference-pipeline--model-summary)  
+  → [stage1_paper](stage1_paper) directory
+
+- **[In Progress]** Annotated dataset curation for the **2nd KPI Challenge**.
+
+### 📢 Publication Updates
+
+- **[2025.10.30] — Stage 3 (Medical Imaging 2026)**  
+  [*Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models*](https://arxiv.org/abs/2510.01287)  
+  **Keywords:** Next-gen CellFM-HITL with newer Cell FMs (2025); challenging-case evaluation.
+
+- **[2025.10.14] — Stage 2 (Nat. Commun. Med. 2025)**  
+  [*Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment*](https://arxiv.org/abs/2411.00078)  
+  **Keywords:** CellFM-HITL framework for assessment + efficient refinement; Cell FMs (2024).
+
+- **[2024.10.27] — Stage 1 (Medical Imaging 2025)**  
+  [*Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology*](https://arxiv.org/abs/2408.06381)  
+  **Keywords:** First large-scale Cell FM evaluation in kidney; Cell FMs (2024).
+
+
+
 
 ## 🎯 Highlights
 
