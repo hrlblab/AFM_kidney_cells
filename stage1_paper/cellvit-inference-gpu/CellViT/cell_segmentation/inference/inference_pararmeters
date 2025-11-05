@@ -1,0 +1,17 @@
+--model 
+./models/pretrained/CellViT-256-x40.pth
+
+--dataset 
+./public-datasets/PAS/testing 
+
+--outdir
+./results 
+
+--magnification 
+40
+
+--patching 
+True 
+
+--overlap 
+0
