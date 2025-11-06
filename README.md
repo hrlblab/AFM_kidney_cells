@@ -237,7 +237,14 @@ For questions or contributions, open an issue or pull request. We are looking fo
 
 Contact: Junlin Guo (junlinguo1@gmail.com), Siqi Lu (slu09@wm.edu), Runchen Wang (runchen.wang@Vanderbilt.Edu), Yuankai Huo (PI)(yuankai.huo@vanderbilt.edu)
 
----
+<br>
+
 ## Awesome Histopathological Nuclei Segmentation Models
 
 New awesome histopathological nuclei segmentation FMs or Specialists are continuously updated in this section. 
+
+|Abbreviation|Title|Publication|Paper|Code & Weights|
+|:---:|---|:---:|:---:|:---:|
+|**Model**|**Name**|xxx 2025|[Model Paper](#)|[link](#)|
+|**Model**|**Name**|xxx 2024|[Model Paper](#)|[link](#)|
+|**Model**|**Name**|-|[Model Paper](#)|[link](#)|
