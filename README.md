@@ -15,7 +15,9 @@
   <a href="#%EF%B8%8F-cellfms-hitl-data-enrichment-illustration">Data Enrichment</a> •
   <a href="#-continuous-model-fine-tuning-with-enriched-data">Fine-Tuning</a> •
   <a href="#results">Results</a> •
-  <a href="#citation">Citation</a> 
+  <a href="#citation">Citation</a> •
+  <a href="#-contact--contribution">Contact</a> •
+  <a href="#awesome-histopathological-nuclei-segmentation-models">Awesome List</a>
 </p>
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
@@ -230,6 +232,12 @@ If you find this repository useful, please consider giving a ⭐ and citing our 
 }
 ```
 
+## 📫 Contact & Contribution
+For questions or contributions, open an issue or pull request. We are looking forward to your feedback!
+
+Contact: Junlin Guo (junlinguo1@gmail.com), Siqi Lu (slu09@wm.edu), Runchen Wang (runchen.wang@Vanderbilt.Edu), Yuankai Huo (PI)(yuankai.huo@vanderbilt.edu)
+
+---
 ## Awesome Histopathological Nuclei Segmentation Models
 
 New awesome histopathological nuclei segmentation FMs or Specialists are continuously updated in this section. 
