@@ -1,6 +1,6 @@
 # CellFM-HITL: A Multi-Foundation-Model–Based Human-in-the-Loop Framework for Model Evaluation and Efficient Data Enrichment in Nuclei Segmentation
 
->**TL;DR**: A human-in-the-loop (HITL) workflow that uses multiple **cell AI foundation models (FMs)** to **assess** nucleus segmentation quality. CellFM-HITL **scalably enriches nuclei annotations** by combining **FMs-generated-pedictions with minimal expert annotation** to **enhance performance** and streamline pathology workflows.
+>**TL;DR**: A human-in-the-loop (HITL) workflow that uses multiple **cell AI foundation models (FMs)** to **assess** nucleus segmentation quality. CellFM-HITL **scalably enriches nuclei annotations** by combining **FMs-generated-pedictions with minimal expert annotation** to **enhance FM performance** in targeted domain (e.g., in Kidney pathology) and streamline pathology workflows.
 
 <p align="center">
   <a href='https://arxiv.org/abs/2408.06381'><img src='https://img.shields.io/badge/Stage1--Paper-SPIE-25'></a> 
