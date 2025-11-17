@@ -24,7 +24,8 @@ This **ongoing project** welcomes researchers to **share** their work with the *
 
 ## 🔥 Last Updated: 2025.11.05
 
-
+- **[2025.11.16]** Updating Patch-level inference codes for Stage 3 models (**CellViT++, Cellpose-SAM**):  
+  → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
 - **[2025.11.05]** Patch-level inference codes for Stage 1 models (**CellViT, StarDist, Cellpose**) are available in:  
   → [Model Summary Table](#-cell-fms-inference-pipeline--model-summary)  
   → [stage1_paper](stage1_paper) directory
