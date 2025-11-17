@@ -22,7 +22,7 @@
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
-## 🔥 Last Updated: 2025.11.05
+## 🔥 Last Updated: 2025.11.16
 
 - **[2025.11.16]** Updating Patch-level inference codes for Stage 3 models (**CellViT++, Cellpose-SAM**):  
   → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
