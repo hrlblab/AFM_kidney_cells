@@ -76,13 +76,15 @@ def main(args):
         ax.axis("off")
 
         # Save overlay and masks
-        overlay_path = output_dir / f"{img_path.stem}_overlay.png"
-        mask_path = output_dir / f"{img_path.stem}_masks{image_ext}"
+        overlay_path = output_dir / f"{img_path.stem}_contours.png"
+        mask_path = output_dir / f"{img_path.stem}_contours.npy"
+
 
         plt.savefig(overlay_path, dpi=300, bbox_inches="tight")
         plt.close(fig)
 
-        # io.imsave(mask_path, masks.astype(np.uint16))
+        np.save(mask_path, masks.astype(np.uint16))
+
 
     print(f" Done! Results saved in {output_dir}")
 
