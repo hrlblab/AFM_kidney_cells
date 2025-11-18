@@ -46,7 +46,7 @@ def main(args):
 
     # === INIT MODEL ===
     print(" Loading Cellpose-SAM model...")
-    model = models.CellposeModel(gpu=True)
+    model = models.CellposeModel(gpu=True) # load cellpose-sam (cpsam) by default: https://cellpose.readthedocs.io/en/latest/api.html#cellposemodel
 
     # === LOOP OVER IMAGES ===
     for i in trange(len(files), desc="Processing images"):

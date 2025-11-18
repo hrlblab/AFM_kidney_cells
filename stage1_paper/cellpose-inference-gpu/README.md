@@ -1,6 +1,6 @@
 # Cellpose GPU Inference
 
-A customized patch-level GPU inference code using the Cellpose 2.0 model. This script processes directories of PNG images and performs instance or binary segmentation with configurable parameters.
+A customized patch-level GPU inference code using the **Cellpose 2.0** model. This script processes directories of PNG images and performs instance or binary segmentation with configurable parameters.
 
 
 ## Requirements
