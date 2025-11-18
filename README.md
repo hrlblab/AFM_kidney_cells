@@ -91,7 +91,9 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 <br>
 
 🔥 **Notes**:
-Awesome histopathological nuclei segmentation FMs or Specialists are continuously updated here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
+- For easier Human-in-the-loop **correction on the model predictions** (next stage), the code converting **prediction mask to geojson (Qupath)** are provided [**mask_to_geojson_qupath.py**](mask_to_geojson_qupath.py).
+
+- Awesome histopathological nuclei segmentation FMs or Specialists are continuously updated [here](#awesome-histopathological-nuclei-segmentation-models).
 
 
 
@@ -123,6 +125,7 @@ Awesome histopathological nuclei segmentation FMs or Specialists are continuousl
 <p align="center">
   <img src="assets/stage3_performance.png" width="800">
 </p>
+
 
 
 ## 🔁 Continuous Model Fine-Tuning with Enriched Data
