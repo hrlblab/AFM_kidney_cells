@@ -111,6 +111,11 @@ python /path/to/CellViT/cell_segmentation/inference/inference_cellvit_experiment
 The `*_contours.npy` instance mask can be converted to a binary mask by setting all non-zero (foreground) pixels to 1.
 
 
+### mask to geojson 
+
+For easy human-in-the-loop curation and correction, see [**mask_to_geojson_qupath.py**](../../mask_to_geojson_qupath.py).
+
+
 ## License
 
 This script is provided under the MIT License. Please see the LICENSE file for details.

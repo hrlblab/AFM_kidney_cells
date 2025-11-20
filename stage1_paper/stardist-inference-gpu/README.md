@@ -129,6 +129,9 @@ python stardist_gpu.py
   <img src="result/2-WXA-FFS-PH-20220322-01(2) rat kindey PAS_patch_5120_47616_grayscale.png" width="300">
 </p>
 
+### mask to geojson 
+
+For easy human-in-the-loop curation and correction, see [**mask_to_geojson_qupath.py**](../../mask_to_geojson_qupath.py).
 
 ## License
 
