@@ -45,7 +45,7 @@ The results are saved in `png` (visualization) and `npy` format.
 - **`*_contours.npy`**: NumPy array containing the instance segmentation mask (0=background, 1,2,3...=instance labels)
 
 <p align="left">
-  <img src="result/2-WXA-FFS-PH-20220322-01(2)%20rat%20kindey%20PAS_patch_5120_47616.png" width="300">
+  <img src="result/2-WXA-FFS-PH-20220322-01(2)%20rat%20kindey%20PAS_patch_5120_47616_contours.png" width="300">
 </p>
 
 ### mask to geojson 
