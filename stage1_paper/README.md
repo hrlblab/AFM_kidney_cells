@@ -1,6 +1,6 @@
 # Inference Baselines 
 
-This folder provides the customized patch-level inference baselines for the cell foundation models (FMs): Cellpose, StarDist(Histo.), and CellViT. 
+This folder provides the customized patch-level inference baselines for the cell foundation models (FMs): Cellpose 2.0, StarDist(Histo.), and CellViT. 
 
 ## Overview
 It is based on our stages 1 and 2 paper using cell FMs released before 2024 Aug.
