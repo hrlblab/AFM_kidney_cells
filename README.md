@@ -93,7 +93,6 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 🔥 **Notes**:
 - For easier Human-in-the-loop **correction on the model predictions** (next stage), the code converting **prediction mask to geojson (Qupath)** are provided [**mask_to_geojson_qupath.py**](mask_to_geojson_qupath.py).
 
-- Awesome histopathological nuclei segmentation FMs or Specialists are continuously updated [here](#awesome-histopathological-nuclei-segmentation-models).
 
 
 
@@ -130,9 +129,25 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 
 ## 🔁 Continuous Model Fine-Tuning with Enriched Data
 
-We currently provide fine-tuning codebases and models for our Stage 2 paper using Cell FMs released before Aug 2024 (Cellpose, StarDist, CellViT). Patch-level fine-tuning support for newer Cell FMs will be added as part of our upcoming Stage 3 work.
+- Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024, for which fine-tuning codebases are provided. 
 
 
+
+- Newer models (Cellpose-SAM, CellViT++ variants, 2024–2025) assessment are in the [**stage3_paper folder**](stage3_paper), with patch-level fine-tuning coming in Stage 3.
+
+<br>
+
+
+<p align="center">
+  <img src="assets/HITL-pipelines.png" width="800">
+</p>
+
+- This work have experimented the finetuned model performance on following annotation enrichment settings. 
+
+
+  - **Easy patches**: Foundation model-generated pseudo labels.
+  - **Hard patches**: Pathologist-corrected shared failure cases
+  - **Combined set**: Combination of easy and hard patches for balanced refinement.
 
 ## Results 
 
@@ -153,12 +168,6 @@ We currently provide fine-tuning codebases and models for our Stage 2 paper usin
 </p>
 
 ### Data Enrichement Strategies
-
-Our enriched labeled dataset comes from:
-
-- **Easy patches:** Foundation model-generated pseudo labels.
-- **Hard patches:** Pathologist-corrected shared failure cases
-- **Combined set:** Combination of easy and hard patches for balanced refinement.
 
 <br>
 
