@@ -44,7 +44,7 @@ This work have experimented the following annotation enrichment strategies for m
 
 ## Results 
 
-<p align="center">
+<p align="left">
   <a href='https://arxiv.org/abs/2411.00078'><img src='https://img.shields.io/badge/Stage2--Paper-Nat.Comm.Med.-red'></a> 
 </p>
 
@@ -58,7 +58,7 @@ This work have experimented the following annotation enrichment strategies for m
 
 - We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
 
-<p align="left">
+<p align="center">
   <img src="../assets/experiment_table.png" width="800">
 </p>
 
