@@ -129,31 +129,23 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 
 ## 🔁 Continuous Model Fine-Tuning with Enriched Data
 
-- Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024, for which fine-tuning codebases are provided. 
-
-
-
-- Newer models (Cellpose-SAM, CellViT++ variants, 2024–2025) assessment are in the [**stage3_paper folder**](stage3_paper), with patch-level fine-tuning coming in Stage 3.
-
-<br>
-
-
 <p align="center">
   <img src="assets/HITL-pipelines.png" width="800">
 </p>
 
-- This work have experimented the finetuned model performance on following annotation enrichment settings. 
 
+- **Finetuning Codes**: Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024, for which fine-tuning codebases are provided in [**stage2_paper folder**](stage2_paper). 
 
-  - **Easy patches**: Foundation model-generated pseudo labels.
-  - **Hard patches**: Pathologist-corrected shared failure cases
-  - **Combined set**: Combination of easy and hard patches for balanced refinement.
+- **Newer models** (Cellpose-SAM, CellViT++ variants, 2024–2025) assessment are in the [**stage3_paper folder**](stage3_paper), with patch-level fine-tuning coming in Stage 3.
+
 
 ## Results 
 
 <p align="left">
   <a href='https://arxiv.org/abs/2411.00078'><img src='https://img.shields.io/badge/Stage2--Paper-Nat.Comm.Med.-red'></a> 
 </p>
+
+
 
 ### Model Performances 
 

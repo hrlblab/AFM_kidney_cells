@@ -46,6 +46,12 @@
   <img src="../assets/HITL-pipelines.png" width="800">
 </p>
 
+This work have experimented the following annotation enrichment strategies for model finetuning. 
+
+  - **Easy patches**: Foundation model-generated pseudo labels.
+  - **Hard patches**: Pathologist-corrected shared failure cases
+  - **Combined set**: Combination of easy and hard patches for balanced refinement.
+
 
 ## Implementations
 
@@ -64,16 +70,77 @@
 
 ### 2. Data/Annotations Enrichment with FMs 
 
-- We combined **"Easy"** (FMs-generated-pedictions) with **"Hard"** image patches (all models failed and pathologists corrected) for model refinement. 
-
+ 
 - Python script for converting prediction to geojson (in **QuPath**) is provided, [**mask_to_geojson_qupath.py**](../mask_to_geojson_qupath.py).
 
 ### 3. Continously Finetuned with Enriched data 
 
-- This work have experimented the finetuned model performance on following annotation enrichment settings. 
 
 - We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
 
 <p align="left">
   <img src="../assets/experiment_table.png" width="800">
+</p>
+
+
+
+#### Access/Use Finetuned Models 
+
+
+
+#### Model Finetuning Codebases 
+
+See `[model name]_kidney_finetune` directories in this folder. 
+
+## Results 
+
+<p align="left">
+  <a href='https://arxiv.org/abs/2411.00078'><img src='https://img.shields.io/badge/Stage2--Paper-Nat.Comm.Med.-red'></a> 
+</p>
+
+### Model Performances 
+
+<p align="center">
+  <img src="../assets/performance_rating_results.png" width="800">
+</p>
+
+### Performance after Finetuning 
+
+- Baselines: We evaluated each foundation model’s (Cellpose, StarDist, CellViT) pre-trained weights on our hold-out test set.
+
+- F1-score comparisons across training/annotation strategies are shown (below). Full metrics (F1, Precision, Recall) are provided in the [Table](../assets/f1-recall-prec.png).
+
+<br>
+
+<p align="center">
+  <img src="../assets/results-f1.png" width="800">
+</p>
+
+
+- Qualitative results. Areas of improvement highlighted by rectangles.
+
+<p align="center">
+  <img src="../assets/qualitative.png" width="600">
+</p>
+
+#### Observation 
+
+- **Baseline performance evaluation**, CellViT achieves the highest F1 score of 0.78. Kidney-targeted FMs still required.
+- **Fine-tuning with enriched data** improves all three models, with StarDist achieving the highest F1 score of 0.82. 
+- **Annotation Enrichment**: We found the **combination** of the <ins>foundation model–generated pseudo-labels</ins> and <ins>a subset of pathologist-corrected hard patches</ins> yields consistent performance gains across all models.
+
+ ### This CellFM-HITL Assessment and Enhancement Framework can be Iterative.
+
+<p align="left">
+  <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage3--Paper-SPIE-26'></a> 
+</p>
+
+
+- With newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”). 
+
+
+<br>
+
+<p align="center">
+  <img src="../assets/stage3_performance_rating.png" width="500">
 </p>
