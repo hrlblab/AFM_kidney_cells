@@ -74,6 +74,6 @@
 
 - We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
 
-<p align="center">
+<p align="left">
   <img src="../assets/experiment_table.png" width="800">
 </p>
