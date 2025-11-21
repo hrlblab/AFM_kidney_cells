@@ -35,7 +35,7 @@
   <img src="../assets/HITL-pipelines.png" width="800">
 </p>
 
-This work have experimented the following annotation enrichment strategies for model finetuning. 
+This work have experimented the following **annotation enrichment strategies** for model finetuning. 
 
   - **Easy patches**: Foundation model-generated pseudo labels.
   - **Hard patches**: Pathologist-corrected shared failure cases
@@ -66,12 +66,18 @@ This work have experimented the following annotation enrichment strategies for m
 
 - Baselines: We evaluated each foundation model’s (Cellpose, StarDist, CellViT) pre-trained weights on our hold-out test set.
 
-- F1-score comparisons across training/annotation strategies are shown (below). Full metrics (F1, Precision, Recall) are provided in the [Table](../assets/f1-recall-prec.png).
+- F1-score (and full metrics) comparisons across training/annotation strategies are shown (below).
 
 <br>
 
 <p align="center">
   <img src="../assets/results-f1.png" width="800">
+</p>
+
+<br>
+
+<p align="center">
+  <img src="../assets/f1-recall-prec.png" width="800">
 </p>
 
 
@@ -106,7 +112,7 @@ This work have experimented the following annotation enrichment strategies for m
 
 ### 1. Individual Cell FMs Inference and Ratings
 
-| Year–Month | Model | Backbone | Post-processing  | Inference code|
+| Year–Month | Model | Backbone | Post-processing  | Original Baseline Inference code|
 |:---:|:---:|:---:|:---:|:---:|
 | 2022 Mar | StarDist (Histo.) | U-Net | Star-convex Polygon |[StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
 | 2022 Nov | Cellpose 2.0 | U-Net |GradientFlow Tracking |[Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
@@ -120,9 +126,47 @@ This work have experimented the following annotation enrichment strategies for m
 
 ### 3. Continously Finetuned with Enriched data 
 
-#### Access Finetuned Models 
+- **Finetuned Models and Weights** 
 
 
-#### Model Finetuning Codebases 
+Model  | Finetuned Models Inference | data processing|
+|:---:|:---:|:---:|
+| StarDist (Histo.) | | RGB |
+| Cellpose  | [Cellpose Finetuned]() | DAPI-like |
+| CellViT   | | RGB |
 
-- See `[model name]_kidney_finetune` directories in this folder. 
+- **Finetuning Instruction**
+
+## License
+
+This script is provided under the MIT License. Please see the LICENSE file for details.
+
+## Citation
+
+If you find this repository useful, please consider giving a ⭐ and citing our papers:
+
+```bibtex
+@inproceedings{guo2025assessment,
+  title={Assessment of cell nuclei AI foundation models in kidney pathology},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  booktitle={Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment},
+  volume={13409},
+  pages={76--82},
+  year={2025},
+  organization={SPIE}
+}
+
+@article{guo2024good,
+  title={How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  journal={arXiv preprint arXiv:2411.00078},
+  year={2024}
+}
+
+@article{wang2025evaluating,
+  title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
+  author={Wang, Runchen and Guo, Junlin and Lu, Siqi and Deng, Ruining and Lu, Zhengyi and Zhu, Yanfan and Yang, Yuechen and Qu, Chongyu and Wang, Yu and Zhao, Shilin and others},
+  journal={arXiv preprint arXiv:2510.01287},
+  year={2025}
+}
+```
