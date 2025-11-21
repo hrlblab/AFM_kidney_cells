@@ -1,20 +1,9 @@
 # Evaluating Cell AI Foundadtion Models (FMs) in Kidney Pathology with Human-in-the-Loop Enrichment
 
-**TL;DR**: 
-
-- Using multiple cell FMs to scalably enrich annotations and for continuous model improvement.
-
-- Benchmarking performance evaluation (**stage 1**) and fine-tuning (**stage 2**) on Cellpose 2.0, StarDist (Histo.), and CellViT in kidney pathology. 
-
-- Can be adapted for Newer models (**stage 3**).
-
-
 ## Overview 
 
 - Stage-1 Performance Assessment: [**Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology**](https://arxiv.org/abs/2408.06381)
 - Stage-2 A CellFM-HITL Framework for Assessment (Stage-1) and Efficient Enhancement: [**Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment**](https://arxiv.org/abs/2411.00078)
-
-
 
 
 ## CellFM-HITL Workflow 
@@ -53,45 +42,6 @@ This work have experimented the following annotation enrichment strategies for m
   - **Combined set**: Combination of easy and hard patches for balanced refinement.
 
 
-## Implementations
-
-### 1. Individual Cell FMs Inference and Ratings
-
-| Year–Month | Model | Backbone | Post-processing  | Inference code|
-|:---:|:---:|:---:|:---:|:---:|
-| 2022 Mar | StarDist (Histo.) | U-Net | Star-convex Polygon |[StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
-| 2022 Nov | Cellpose 2.0 | U-Net |GradientFlow Tracking |[Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
-| 2023 Oct | CellViT  | ViT (HIPT, SAM) |HoVer-Net |[CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
-
-
-- Since Stage 2 focused on validating the CellFM-HITL framework, the FMs evaluated were released before August 2024.
-
-- We also have the new cell FMs (**Cellpose-SAM, CellViT++ variants released 2024 Aug. - 2025 Aug.**) assessment, in [**stage3_paper folder**](../stage3_paper/).
-
-### 2. Data/Annotations Enrichment with FMs 
-
- 
-- Python script for converting prediction to geojson (in **QuPath**) is provided, [**mask_to_geojson_qupath.py**](../mask_to_geojson_qupath.py).
-
-### 3. Continously Finetuned with Enriched data 
-
-
-- We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
-
-<p align="left">
-  <img src="../assets/experiment_table.png" width="800">
-</p>
-
-
-
-#### Access/Use Finetuned Models 
-
-
-
-#### Model Finetuning Codebases 
-
-See `[model name]_kidney_finetune` directories in this folder. 
-
 ## Results 
 
 <p align="left">
@@ -102,6 +52,14 @@ See `[model name]_kidney_finetune` directories in this folder.
 
 <p align="center">
   <img src="../assets/performance_rating_results.png" width="800">
+</p>
+
+### Data Enrichment for Finetuning 
+
+- We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
+
+<p align="left">
+  <img src="../assets/experiment_table.png" width="800">
 </p>
 
 ### Performance after Finetuning 
@@ -129,18 +87,42 @@ See `[model name]_kidney_finetune` directories in this folder.
 - **Fine-tuning with enriched data** improves all three models, with StarDist achieving the highest F1 score of 0.82. 
 - **Annotation Enrichment**: We found the **combination** of the <ins>foundation model–generated pseudo-labels</ins> and <ins>a subset of pathologist-corrected hard patches</ins> yields consistent performance gains across all models.
 
+
  ### This CellFM-HITL Assessment and Enhancement Framework can be Iterative.
 
 <p align="left">
   <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage3--Paper-SPIE-26'></a> 
 </p>
 
-
-- With newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”). 
-
+- In our Stage 3 work, with newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”). 
 
 <br>
 
 <p align="center">
   <img src="../assets/stage3_performance_rating.png" width="500">
 </p>
+
+## Implementations and Codes
+
+### 1. Individual Cell FMs Inference and Ratings
+
+| Year–Month | Model | Backbone | Post-processing  | Inference code|
+|:---:|:---:|:---:|:---:|:---:|
+| 2022 Mar | StarDist (Histo.) | U-Net | Star-convex Polygon |[StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
+| 2022 Nov | Cellpose 2.0 | U-Net |GradientFlow Tracking |[Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
+| 2023 Oct | CellViT  | ViT (HIPT, SAM) |HoVer-Net |[CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
+
+- We also have the new cell FMs (**Cellpose-SAM, CellViT++ variants released 2024 Aug. - 2025 Aug.**) assessment, in [**stage3_paper folder**](../stage3_paper/).
+
+### 2. Annotate/Curate Data in QuPath 
+
+- Python script for converting prediction to geojson (for minimal correction in **QuPath**) is provided, [**mask_to_geojson_qupath.py**](../mask_to_geojson_qupath.py).
+
+### 3. Continously Finetuned with Enriched data 
+
+#### Access Finetuned Models 
+
+
+#### Model Finetuning Codebases 
+
+- See `[model name]_kidney_finetune` directories in this folder. 
