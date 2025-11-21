@@ -57,9 +57,8 @@
 | 2022 Nov | Cellpose 2.0 | U-Net |GradientFlow Tracking |[Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
 | 2023 Oct | CellViT  | ViT (HIPT, SAM) |HoVer-Net |[CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
 
-<br>
 
-- Since Stage 2 focused on validating the CellFM-HITL framework, the foundation models evaluated were released before August 2024.
+- Since Stage 2 focused on validating the CellFM-HITL framework, the FMs evaluated were released before August 2024.
 
 - We also have the new cell FMs (**Cellpose-SAM, CellViT++ variants released 2024 Aug. - 2025 Aug.**) assessment, in [**stage3_paper folder**](../stage3_paper/).
 
@@ -73,7 +72,7 @@
 
 - This work have experimented the finetuned model performance on following annotation enrichment settings. 
 
-- We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% .. 100%)
+- We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
 
 <p align="center">
   <img src="../assets/experiment_table.png" width="800">
