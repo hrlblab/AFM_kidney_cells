@@ -44,7 +44,7 @@ This work have experimented the following annotation enrichment strategies for m
 
 ## Results 
 
-<p align="left">
+<p align="center">
   <a href='https://arxiv.org/abs/2411.00078'><img src='https://img.shields.io/badge/Stage2--Paper-Nat.Comm.Med.-red'></a> 
 </p>
 
