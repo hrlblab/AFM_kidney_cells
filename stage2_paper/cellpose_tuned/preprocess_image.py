@@ -1,3 +1,19 @@
+'''
+Preprocess RGB images for Cellpose 3.0 API training and inference.
+
+Specifically, it:
+    1. Converts RGB images to grayscale
+    2. Normalizes pixel values to [0, 1] range as float32
+    3. Creates a two-band array by stacking the grayscale image with a zero-filled band
+    4. Saves the result as .npy files with shape (2, height, width)
+
+Input:
+    - Folder containing RGB PNG images
+    
+Output:
+    - Folder containing .npy files with shape (2, height, width) as float32 arrays
+'''
+
 import os
 import numpy as np
 from PIL import Image
@@ -28,9 +44,9 @@ def preprocess_image_bands(input_folder, output_folder):
 if __name__ == "__main__":
 
     # Paths
-    input_folder = './data_cellpose/good25_bad100_weighted/images' # path to rgb images (.png files)
-    output_folder = input_folder.replace('/images', '/images_processed')
-    # Ensure the output folder exists
+    input_folder = '/path/to/rgb/images/folder'             #  folder of .png files
+    output_folder = '/path/to/images_processed/folder'      #  output folder of .npy files (2, 512, 512) ndarray 
+
     os.makedirs(output_folder, exist_ok=True)
     preprocess_image_bands(input_folder, output_folder)
 

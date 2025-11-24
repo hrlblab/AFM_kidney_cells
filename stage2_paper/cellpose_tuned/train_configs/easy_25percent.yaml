@@ -1,0 +1,12 @@
+image_dir:  '/path/to/stage2_paper/cellpose_tuned/data_dummy/train/images_processed' #"/path/to/images"
+mask_dir: '/path/to/stage2_paper/cellpose_tuned/data_dummy/train/labels'             #"/path/to/masks" (easy, hard, or easy+hard)
+val_image_dir: "/path/to/stage2_paper/cellpose_tuned/data_dummy/val/images_processed"
+val_mask_dir: "/path/to/stage2_paper/cellpose_tuned/data_dummy/val/labels"
+save_path: "/path/to/stage2_paper/cellpose_tuned/cellpose_models/"                  # output dir
+device: "cuda:0"
+
+
+lr: 0.001
+n_epochs: 100
+batch_size: 8 # default of api
+save_every: 50

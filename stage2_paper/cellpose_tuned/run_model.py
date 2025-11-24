@@ -9,13 +9,12 @@ import torch
 from pathlib import Path
 
 
-data_dir = './200_annotation_all/images_processed'
-rgb_dir = './200_annotation_all/png'
-output_dir = '/mnt/Data/guoj5/cell_data_experiments/ver2/major_revision/results_rerun/10%/cellpose/fold_good_10_bad_10'
-
+data_dir = '/path/to/images_processed'  # path to processed images (dapi-like)
+rgb_dir = '/path/to/png/folder'         # path to rgb image files directory 
+output_dir = '/path/to/output'          # inference output directory 
+model_path = '/path/to/cellpose_models/finetuned_model'
 os.makedirs(output_dir, exist_ok=True)
-# model_path = '/mnt/Data/guoj5/cell_data_experiments/ver2/major_revision/cellpose_models/bad100/models/finetuned_model.zip'
-model_path = '/mnt/Data/guoj5/scp_redownload/cellpose_models/revision/fold_good10_bad10/models/finetuned_model'
+
 X = sorted(glob.glob(os.path.join(data_dir, '*.npy')))
 Y = sorted(glob.glob(os.path.join(rgb_dir,'*.png')))
 assert all(Path(x).name.split('.')[0]==Path(y).name.split('.')[0] for x,y in zip(X,Y))
@@ -37,8 +36,7 @@ for i in range(len(X)):
     image_array = np.load(image_file) # processed 2-bands image 
     image = np.array(Image.open(rgb_file).convert('RGB')) # rgb image 
 
-    # model = models.CellposeModel(gpu=use_GPU, model_type=model_path, device=device)
-    model = models.CellposeModel(gpu=use_GPU, pretrained_model=model_path, device=device) #debug 4/18/25
+    model = models.CellposeModel(gpu=use_GPU, pretrained_model=model_path, device=device) 
     mask, flows, styles = model.eval(image_array, channels=channels, diameter=diameter, flow_threshold=flow_threshold,
                             min_size=min_size, invert=invert)
 

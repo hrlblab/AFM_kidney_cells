@@ -1,10 +1,8 @@
 # import packages 
-import os, shutil
+import os
 import numpy as np
-import matplotlib.pyplot as plt
-from cellpose import core, utils, io, models, metrics
+from cellpose import core, io, models
 from cellpose import train
-from PIL import Image
 import torch
 import time 
 
@@ -59,10 +57,9 @@ if Use_Default_Advanced_Parameters:
     lr = 0.1
     weight_decay = 0.0001
 
-# model_path = os.path.join(train_dir, 'cellpose_models/') #change to own save path
 
-# if os.path.exists(os.path.join(model_path, model_name)):
-#     print(f'!! WARNING: {model_name} already exists and will be deleted in the following part!')
+if os.path.exists(os.path.join(train_dir, model_name)):
+    print(f'!! WARNING: {model_name} already exists and will be deleted in the following part!')
 
 
 # data loading 
