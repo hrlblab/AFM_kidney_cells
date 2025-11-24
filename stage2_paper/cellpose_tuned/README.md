@@ -29,9 +29,9 @@ pip install opencv-python-headless==4.8.1.78
 
 ## DAPI-like data prep 
 
-The first band contains the grayscale intensity and the second band is typically unused (set to zeros). This format is compatible with Cellpose 3.0's training and inference APIs.
+The first band contains the grayscale intensity and the second band is typically unused (set to zeros). This numpy ndarray format is compatible with Cellpose 3.0's training and inference APIs.
 
-Update the input_folder and output_folder paths,
+Update the `input_folder` and `output_folder` paths in [preprocess_image.py](preprocess_image.py)
 ```python
 if __name__ == "__main__":
 
@@ -67,10 +67,79 @@ data_dummy
         ... 
 ```
 
-## Model and Weights 
+## Model Inference and Weights 
+
+### Model Inference
+
+1. Update paths in `run_model.py`:
+   - `data_dir`: processed 2-band `.npy` images
+   - `rgb_dir`: corresponding RGB `.png` images (for visualization)
+   - `output_dir`: output directory
+   - `model_path`: fine-tuned model path
 
 
+
+2. (Optional) Adjust inference parameters:
+   - `diameter`: cell diameter estimate (default: 17)
+   - `flow_threshold`: flow error threshold (default: 0.4)
+   - `min_size`: minimum cell size in pixels (default: 15)
+
+
+3. Run:
+```bash
+python run_model.py
+```
+**Outputs:** Contour overlays (`*_contours.png`) and instance masks (`*_contours.npy`)
 
 ## Training Instructions 
 
-Our enriched datasets includes "easy" (FMs-generated) annotations, "hard" (pathologist-corrected) annotations, or both. Prepare the training dataset — or your own labeled dataset — in the 2-band ndarray format described in the [DAPI-like data prep section](#dapi-like-data-prep).
+1. Prepare training data in the 2-band ndarray format (see [DAPI-like data prep](#dapi-like-data-prep)).
+
+2. Create a training configuration file (see [easy_25percent.yaml](train_configs/easy_25percent.yaml) for an example).
+
+3. Run training:
+```bash
+python train_model.py --config /path/to/config.yaml
+```
+
+4. Run inference:
+```bash
+python run_model.py
+```
+
+In our work, we used these <ins>experimental training settings</ins>:
+
+- **Dataset types:** We used "easy" (FM-generated) annotations, "hard" (pathologist-corrected) annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf)).
+
+- **Configuration details:** See [Supplementary Information 2.2](../supp_info.pdf).
+
+
+## Citation
+
+If you find this repository useful, please consider giving a ⭐ and citing our papers:
+
+```bibtex
+@inproceedings{guo2025assessment,
+  title={Assessment of cell nuclei AI foundation models in kidney pathology},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  booktitle={Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment},
+  volume={13409},
+  pages={76--82},
+  year={2025},
+  organization={SPIE}
+}
+
+@article{guo2024good,
+  title={How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  journal={arXiv preprint arXiv:2411.00078},
+  year={2024}
+}
+
+@article{wang2025evaluating,
+  title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
+  author={Wang, Runchen and Guo, Junlin and Lu, Siqi and Deng, Ruining and Lu, Zhengyi and Zhu, Yanfan and Yang, Yuechen and Qu, Chongyu and Wang, Yu and Zhao, Shilin and others},
+  journal={arXiv preprint arXiv:2510.01287},
+  year={2025}
+}
+```
