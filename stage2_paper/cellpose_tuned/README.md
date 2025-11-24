@@ -54,17 +54,14 @@ Example processed images and their paired labels are provided in [data_dummy](da
 data_dummy
 ├── train
 │   ├── images_processed
-│   │   ├── xxx.npy
-│   │   └── xxx.npy
-|   |   ... 
+│   │   ├── image1.npy
+│   │   ├── image2.npy
 │   └── labels
-│       ├── xxx.npy
-│       ├── xxx.npy
-|       |...
+│       ├── image1.npy
+│       ├── image2.npy
 └── val
     ├── images_processed
     │   └── xxx.npy
-    |   ...
     ├── labels
     │   └── xxx.npy
         ... 
