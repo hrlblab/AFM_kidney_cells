@@ -22,9 +22,12 @@
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
-## 🔥 Last Updated: 2025.11.23
-- **[2025.11.18]** Python script [here](mask_to_geojson_qupath.py) for **converting model predictions to geojson** used in digital tools like Qupath.
-- **[2025.11.16]** Updating Patch-level inference codes for Stage 3 models (**CellViT++, Cellpose-SAM**):  
+## 🔥 Last Updated: 2025.11.25
+- **[2025.11.25]** Stage2 model weights and code instructions: Cellpose
+  
+  → [stage2_paper](stage2_paper) directory
+- **[2025.11.18]** Masks/Predictions to Geojson (Qupath): [mask_to_geojson_qupath.py](./mask_to_geojson_qupath.py)
+- **[2025.11.16]** Patch-level inference codes for Stage 3 models (**CellViT++, Cellpose-SAM**):  
   → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
 - **[2025.11.05]** Patch-level inference codes for Stage 1 models (**CellViT, StarDist, Cellpose**) are available in:  
   → [Model Summary Table](#-cell-fms-inference-pipeline--model-summary)  
@@ -134,10 +137,22 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 </p>
 
 
-- **Finetuning Codes**: Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024, for which fine-tuning codebases are provided in [**stage2_paper folder**](stage2_paper). 
+- **Finetuning**: Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024. Detail see [stage2_paper folder](./stage2_paper/README.md)
 
-- **Newer models** (Cellpose-SAM, CellViT++ variants, 2024–2025) assessment are in the [**stage3_paper folder**](stage3_paper), with patch-level fine-tuning coming in Stage 3.
 
+
+  Finetuned Models | data processing| Weights | Implementations|
+  |:---:|:---:|:---:|:---:|
+  | StarDist (Histo.) |  RGB | | |
+  |Cellpose Finetuned| DAPI-like | [Easy_100%](./stage2_paper/model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./stage2_paper/cellpose_tuned/README.md)
+  | CellViT   |  RGB | | |
+
+
+
+
+
+
+- **Newer models**: Since Stage 2 was submitted in Nov 2024, benchmarking of Cellpose-SAM and CellViT++ is placed in the [stage3_paper folder](./stage3_paper/) to assess the unaddressed or challenging Stage 2 samples.
 
 ## Results 
 
