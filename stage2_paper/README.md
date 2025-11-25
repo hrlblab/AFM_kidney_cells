@@ -122,16 +122,16 @@ Model | Original Baseline Inference code|
 
 ### 2. Annotate/Curate Data in QuPath 
 
-- Python script for converting prediction to geojson (for minimal correction in **QuPath**) is provided, [**mask_to_geojson_qupath.py**](../mask_to_geojson_qupath.py).
+- Script for converting prediction to geojson (for correction in **QuPath**): [**mask_to_geojson_qupath.py**](../mask_to_geojson_qupath.py).
 
-### 3. Continously Finetuned with Enriched data 
+### 3. Finetuned with Enriched Data 
 
 
-Finetuned Models | data processing| Weights |
-|:---:|:---:|:---:|
-| StarDist (Histo.) |  RGB | |
-|[Cellpose Finetuned](cellpose_tuned/README.md#model-inference-and-weights) | DAPI-like | |
-| CellViT   |  RGB | |
+Finetuned Models | data processing| Weights | Implementations|
+|:---:|:---:|:---:|:---:|
+| StarDist (Histo.) |  RGB | | |
+|Cellpose Finetuned| DAPI-like | [Easy_100%](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
+| CellViT   |  RGB | | |
 
 ## License
 

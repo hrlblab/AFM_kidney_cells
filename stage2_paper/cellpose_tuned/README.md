@@ -67,7 +67,17 @@ data_dummy
         ... 
 ```
 
-## Model Inference and Weights 
+## Model Weights and Inference
+
+
+### Model Weights
+
+In this work, Cellpose model fine-tuned with all "Easy" labels achieves the best performance. The corresponding model weight is provided in [Easy_100%](../model_weights/cellpose/Easy_100%25/) in `model_weights/cellpose` folder.
+
+
+<p align="center">
+  <img src="../../assets/cellpose_performance.png" width="500">
+</p>
 
 ### Model Inference
 
@@ -84,7 +94,20 @@ data_dummy
 ```bash
 python run_model.py
 ```
-**Outputs:** Contour overlays (`*_contours.png`) and instance masks (`*_contours.npy`)
+
+
+
+### Evaluation (optional)
+
+1. [StarDist](https://github.com/stardist/stardist) provides clean inference API for calculating nuclei instance segmentation metrics. To use it, first install `stardist` in your conda environment.
+```bash
+conda activate <env_name>
+pip install stardist
+```
+2. Then run `evaluate.py` with the specified paths to the prediction and ground-truth label folders (`.npy` files).
+```bash
+python evaluate.py --predictions /path/to/model/predictions/folder --gt /path/to/labels/folder --log_csv /path/to/log/metrics.csv 
+```
 
 ## Training Instructions 
 
@@ -97,16 +120,12 @@ python run_model.py
 python train_model.py --config /path/to/config.yaml
 ```
 
-4. Run inference:
-```bash
-python run_model.py
-```
-
 In our work, we used these <ins>experimental training settings</ins>:
 
 - **Dataset types:** We used "easy" (FM-generated) annotations, "hard" (pathologist-corrected) annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf)).
 
 - **Configuration details:** See [Supplementary Information 2.2](../supp_info.pdf).
+
 
 
 ## Citation
