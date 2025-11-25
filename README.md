@@ -39,7 +39,7 @@ This **ongoing project** welcomes researchers to **share** their work with the *
   **Keywords:** Next-gen CellFM-HITL with newer Cell FMs (2025); challenging-case evaluation.
 
 - **[2025.10.14] — Stage 2 (Nat. Commun. Med. 2025)**  
-  [*Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment*](https://arxiv.org/abs/2411.00078)  
+  [*Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment*](https://www.nature.com/articles/s43856-025-01205-x)  
   **Keywords:** CellFM-HITL framework for assessment + efficient refinement; Cell FMs (2024).
 
 - **[2024.10.27] — Stage 1 (Medical Imaging 2025)**  
