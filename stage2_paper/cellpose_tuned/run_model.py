@@ -28,7 +28,7 @@ invert=False # default
 min_size = 15
 device = torch.device("cuda:0") #default 0
 
-for i in range(len(X)):
+for i in tqdm(range(len(X))):
     image_file = X[i]
     rgb_file = Y[i]
     assert Path(image_file).name.split('.')[0]==Path(rgb_file).name.split('.')[0]
