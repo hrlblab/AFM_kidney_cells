@@ -1,4 +1,4 @@
-# Cellpose Fine-tuning d and Models
+# Cellpose Fine-tuning and Models
 
 
 ## Installation 
@@ -71,21 +71,16 @@ data_dummy
 
 ### Model Inference
 
-1. Update paths in `run_model.py`:
+1. Prepare images in the 2-band ndarray format (see [DAPI-like data prep](#dapi-like-data-prep)).
+
+2. Update paths in `run_model.py`:
    - `data_dir`: processed 2-band `.npy` images
-   - `rgb_dir`: corresponding RGB `.png` images (for visualization)
+   - `rgb_dir`: corresponding RGB `.png` images
    - `output_dir`: output directory
    - `model_path`: fine-tuned model path
 
 
-
-2. (Optional) Adjust inference parameters:
-   - `diameter`: cell diameter estimate (default: 17)
-   - `flow_threshold`: flow error threshold (default: 0.4)
-   - `min_size`: minimum cell size in pixels (default: 15)
-
-
-3. Run:
+3. Run inference on the processed images:
 ```bash
 python run_model.py
 ```

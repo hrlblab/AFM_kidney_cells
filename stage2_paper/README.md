@@ -1,9 +1,9 @@
 # Evaluating Cell AI Foundadtion Models (FMs) in Kidney Pathology with Human-in-the-Loop Enrichment
 
-## Overview 
+<!-- ## Overview  -->
 
-- Stage-1 Performance Assessment: [**Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology**](https://arxiv.org/abs/2408.06381)
-- Stage-2 A CellFM-HITL Framework for Assessment (Stage-1) and Efficient Enhancement: [**Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment**](https://arxiv.org/abs/2411.00078)
+<!-- - Stage-1 Performance Assessment: [**Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology**](https://arxiv.org/abs/2408.06381)
+- Stage-2 A CellFM-HITL Framework for Assessment (Stage-1) and Efficient Enhancement: [**Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment**](https://arxiv.org/abs/2411.00078) -->
 
 
 ## CellFM-HITL Workflow 
@@ -112,11 +112,11 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### 1. Individual Cell FMs Inference and Ratings
 
-| Year–Month | Model | Backbone | Post-processing  | Original Baseline Inference code|
-|:---:|:---:|:---:|:---:|:---:|
-| 2022 Mar | StarDist (Histo.) | U-Net | Star-convex Polygon |[StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
-| 2022 Nov | Cellpose 2.0 | U-Net |GradientFlow Tracking |[Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
-| 2023 Oct | CellViT  | ViT (HIPT, SAM) |HoVer-Net |[CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
+Model | Original Baseline Inference code|
+|:---:|:---:|
+| StarDist (Histo.) | [StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
+| Cellpose  | [Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
+| CellViT  | [CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
 
 - We also have the new cell FMs (**Cellpose-SAM, CellViT++ variants released 2024 Aug. - 2025 Aug.**) assessment, in [**stage3_paper folder**](../stage3_paper/).
 
@@ -126,16 +126,12 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### 3. Continously Finetuned with Enriched data 
 
-- **Finetuned Models and Weights** 
 
-
-Model  | Finetuned Models Inference | data processing|
+Finetuned Models | data processing| Weights |
 |:---:|:---:|:---:|
-| StarDist (Histo.) | | RGB |
-| Cellpose  | [Cellpose Finetuned]() | DAPI-like |
-| CellViT   | | RGB |
-
-- **Finetuning Instruction**
+| StarDist (Histo.) |  RGB | |
+|[Cellpose Finetuned](cellpose_tuned/README.md#model-inference-and-weights) | DAPI-like | |
+| CellViT   |  RGB | |
 
 ## License
 

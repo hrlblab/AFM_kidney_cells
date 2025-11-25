@@ -2,11 +2,11 @@
 
 This folder provides the customized patch-level inference baselines for the cell foundation models (FMs): Cellpose 2.0, StarDist(Histo.), and CellViT. 
 
-## Overview
+<!-- ## Overview
 It is based on our stages 1 and 2 paper using cell FMs released before 2024 Aug.
 
 - Stage-1 Performance Assessment: [Assessment of Cell Nuclei AI Foundation Models in Kidney Pathology](https://arxiv.org/abs/2408.06381)
-- Stage-2 A CellFM-HITL Framework for Assessment (Stage-1) and Efficient Enhancement: [Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment](https://arxiv.org/abs/2411.00078)
+- Stage-2 A CellFM-HITL Framework for Assessment (Stage-1) and Efficient Enhancement: [Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment](https://arxiv.org/abs/2411.00078) -->
 
 ## Cell FMs Released Before 2024 Aug.
 
@@ -30,3 +30,32 @@ It is based on our stages 1 and 2 paper using cell FMs released before 2024 Aug.
   <img src="../assets/performance_rating.png" width="770">
 </p>
 
+## Citation
+
+If you find this repository useful, please consider giving a ⭐ and citing our papers:
+
+```bibtex
+@inproceedings{guo2025assessment,
+  title={Assessment of cell nuclei AI foundation models in kidney pathology},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  booktitle={Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment},
+  volume={13409},
+  pages={76--82},
+  year={2025},
+  organization={SPIE}
+}
+
+@article{guo2024good,
+  title={How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  journal={arXiv preprint arXiv:2411.00078},
+  year={2024}
+}
+
+@article{wang2025evaluating,
+  title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
+  author={Wang, Runchen and Guo, Junlin and Lu, Siqi and Deng, Ruining and Lu, Zhengyi and Zhu, Yanfan and Yang, Yuechen and Qu, Chongyu and Wang, Yu and Zhao, Shilin and others},
+  journal={arXiv preprint arXiv:2510.01287},
+  year={2025}
+}
+```
