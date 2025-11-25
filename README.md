@@ -23,13 +23,13 @@
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
 ## 🔥 Last Updated: 2025.11.25
-- **[2025.11.25]** Stage2 model weights and code instructions: Cellpose
+- **[2025.11.25]** Stage 2 fine-tuned model weights and code instructions: Cellpose
   
   → [stage2_paper](stage2_paper) directory
 - **[2025.11.18]** Masks/Predictions to Geojson (Qupath): [mask_to_geojson_qupath.py](./mask_to_geojson_qupath.py)
-- **[2025.11.16]** Patch-level inference codes for Stage 3 models (**CellViT++, Cellpose-SAM**):  
+- **[2025.11.16]** Patch-level inference codes for Stage 3 baseline models (**CellViT++, Cellpose-SAM**):  
   → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
-- **[2025.11.05]** Patch-level inference codes for Stage 1 models (**CellViT, StarDist, Cellpose**) are available in:  
+- **[2025.11.05]** Patch-level inference codes for Stage 1 baseline models (**CellViT, StarDist, Cellpose**) are available in:  
   → [Model Summary Table](#-cell-fms-inference-pipeline--model-summary)  
   → [stage1_paper](stage1_paper) directory
 
