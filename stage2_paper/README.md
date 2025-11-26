@@ -127,11 +127,13 @@ Model | Original Baseline Inference code|
 ### 3. Finetuned with Enriched Data 
 
 
-Finetuned Models | data processing| Weights | Implementations|
+Finetuned Models | data processing| Weights from Strategies | Implementations|
 |:---:|:---:|:---:|:---:|
-| StarDist (Histo.) |  RGB | | |
-|Cellpose Finetuned| DAPI-like | [Easy_100%](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
+| StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)| |
+|Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
 | CellViT   |  RGB | | |
+
+Due to storage limites, the **best model weights** for <ins>each strategy</ins> are provided in [(model_weights/stardist)](../model_weights/stardist/), and all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 
 ## License
 

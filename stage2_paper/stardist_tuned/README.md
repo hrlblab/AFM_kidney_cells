@@ -15,17 +15,46 @@ pip install gputools==0.2.14
 
 ## Model Weights and Inference
 
-- Kidney-finetuned StarDist models show improved performance, specially recall and F1 across all three annotation strategies while maintaining high precision. 
+### Model Weights 
 
-- Due to the storage limites, the **best weights** for <ins>each strategy</ins> are provided in [(model_weights/stardist)](../model_weights/stardist/) and available for download on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
+- Kidney-finetuned StarDist models show improved F1 and Recall across all three annotation strategies while maintaining Precision. 
+
+- Due to storage limites, the **best model weights** for <ins>each strategy</ins> are provided in [(model_weights/stardist)](../model_weights/stardist/), and all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
+
 
 <p align="center">
   <img src="../../assets/stardist_performance.png" width="800">
 </p>
 
+### Finetuned Model Inference 
+
+Run inference on images using a finetuned StarDist model with `run_model.py`. 
+
+**Usage:**
+```bash
+python run_model.py \
+    --model_dir /path/to/model/directory \
+    --image_dir /path/to/input/images \
+    --output_dir /path/to/output/directory
+```
+
+**Arguments:**
+- `--model_dir`: Path to the finetuned model directory
+- `--image_dir`: Path to directory containing input PNG images
+- `--output_dir`: Path to output directory where results will be saved
+
+### Example Run 
+Use the finetuned model (trained with Easy 100%). 
+```bash
+python run_model.py \
+    --model_dir /path/to/model_weights/stardist/Easy/Easy_100% \
+    --image_dir /path/to/input/images \
+    --output_dir /path/to/output/directory
+```
+
 ## Training Instructions 
 
-### Data and Paths 
+### Data  
 
 Prepare `images` (.png files) and `labels` (.npy files) for both training and validation. Some examples are provided in `data_dummy`.
 
@@ -58,4 +87,44 @@ val_image_dir = '/path/to/val/images' # folder of png files
 val_mask_dir = 'path/to/val/labels'   # folder of npy lables 
 
 model_name = '/path/to/saved/model/folder' # the finetuned model saved here 
+```
+
+To run inference with the trained model, use the path specified in `model_name` as the `--model_dir` argument in the inference command above. See the ["Finetuned Model Inference"](#finetuned-model-inference) section for details. 
+
+## Citation
+
+If you find this repository useful, please consider giving a ⭐ and citing our papers:
+
+```bibtex
+@inproceedings{guo2025assessment,
+  title={Assessment of cell nuclei AI foundation models in kidney pathology},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  booktitle={Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment},
+  volume={13409},
+  pages={76--82},
+  year={2025},
+  organization={SPIE}
+}
+
+
+@article{guo_evaluating_2025,
+  author       = {Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and Wang, Yu and Zhao, Shilin and Chang, Catie and Wilkes, Mitchell and Fogo, Agnes and Yin, Mengmeng and Yang, Haichun and Huo, Yuankai},
+  title        = {Evaluating cell AI foundation models in kidney pathology with human-in-the-loop enrichment},
+  journal      = {Communications Medicine},
+  volume       = {5},
+  year         = {2025},
+  number       = {1},
+  pages        = {495},
+  doi          = {10.1038/s43856-025-01205-x},
+  url          = {https://doi.org/10.1038/s43856-025-01205-x},
+  month        = nov
+}
+
+
+@article{wang2025evaluating,
+  title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
+  author={Wang, Runchen and Guo, Junlin and Lu, Siqi and Deng, Ruining and Lu, Zhengyi and Zhu, Yanfan and Yang, Yuechen and Qu, Chongyu and Wang, Yu and Zhao, Shilin and others},
+  journal={arXiv preprint arXiv:2510.01287},
+  year={2025}
+}
 ```
