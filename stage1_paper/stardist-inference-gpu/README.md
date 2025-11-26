@@ -1,32 +1,36 @@
 # StarDist GPU Inference
-A patch-level GPU inference code using the StarDist (Histo.). This script processes directories of PNG images and performs instance or binary segmentation with configurable parameters. The main script is `stardist_gpu.py`.
+A patch-level GPU inference code using the StarDist (Histo.). This script processes directories of PNG images and performs instance or binary segmentation with configurable parameters. The main script is [**stardist_gpu.py**](./stardist_gpu.py).
 
 ## Requirements
 
-### System
-
-- Python 3.8 and TensorFlow 2.4 (the version we use)
+- Python 3.8 and TensorFlow 2.4.4 (the version we use)
 - CUDA-compatible GPU (recommended) or CPU
 - NVIDIA GPU drivers (for GPU support)
 
-### Installation 
+## Installation 
 
 ### Option 1: Step-by-Step Install 
 
 
-1. Create the conda environment from the `csbdeep` TF 2.4 YAML (you can rename the env in the file): see the [installation guide](https://github.com/CSBDeep/CSBDeep/tree/main/extras#conda-environment).
+1. Create the conda environment from the `csbdeep` TensorFlow 2.4 YML (you can download and rename the env in the file): see the [installation guide](https://github.com/CSBDeep/CSBDeep/tree/main/extras#conda-environment).
 
     ```bash
     conda env create -f https://raw.githubusercontent.com/CSBDeep/CSBDeep/main/extras/environment-gpu-py3.8-tf2.4.yml
-    ```
-2. StarDist can then be installed with `pip`:
 
-    TensorFlow 2 (version 2.x.x): 
+    conda activate <env_name>
+    ```
+2. StarDist can then be installed with `pip` (installed version 0.8.5):
+
     ```bash
-    pip install stardist
+    pip install stardist==0.8.5
     ```
-3. Other packages/libraries such as `numpy`, `pillow`, `cv2`. Check that `numpy==1.19.5`. Exact versions are listed in [requirements.txt](requirements.txt) (or [environment.yml](environment.yml)).
+    only ver 0.8.5 was verified.
+3. Other packages/libraries compatible with stardist==0.8.5. 
 
+    ```bash
+    pip install scikit-image==0.19.3 numba==0.56.4 opencv-python==4.9.0.80 scikit-image==0.19.3 numpy==1.23.5 
+    ```
+    Exact versions are listed in [requirements.txt](requirements.txt) (or [environment.yml](environment.yml)).
 ### Option 2: Use environment.yml / requirements.txt
 
 - use conda: 

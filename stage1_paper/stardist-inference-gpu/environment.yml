@@ -1,45 +1,61 @@
-name: stardist_cuda_11_0_new
+name: myenv_clone
 channels:
   - nvidia
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=5.1
   - asttokens=2.0.5
   - backcall=0.2.0
-  - ca-certificates=2023.12.12
+  - ca-certificates=2024.7.4
+  - comm=0.2.2
   - cudatoolkit=11.0.3
   - cudnn=8.0.4
+  - debugpy=1.6.7
   - decorator=5.1.1
+  - entrypoints=0.4
   - executing=0.8.3
+  - ipykernel=6.29.5
   - ipython=8.12.2
   - jedi=0.18.1
+  - jupyter_client=7.3.4
+  - jupyter_core=5.7.2
   - ld_impl_linux-64=2.38
   - libffi=3.4.4
   - libgcc-ng=11.2.0
   - libgomp=11.2.0
+  - libsodium=1.0.18
   - libstdcxx-ng=11.2.0
   - matplotlib-inline=0.1.6
   - ncurses=6.4
-  - openssl=3.0.13
+  - nest-asyncio=1.6.0
+  - openssl=3.0.14
   - parso=0.8.3
   - pexpect=4.8.0
   - pickleshare=0.7.5
   - pip=23.3.1
+  - platformdirs=4.2.2
   - prompt-toolkit=3.0.43
+  - psutil=5.9.0
   - ptyprocess=0.7.0
   - pure_eval=0.2.2
   - pygments=2.15.1
   - python=3.8.18
+  - python_abi=3.8
+  - pyzmq=25.1.2
   - readline=8.2
   - setuptools=68.2.2
   - sqlite=3.41.2
   - stack_data=0.2.0
   - tk=8.6.12
+  - tornado=6.1
   - traitlets=5.7.1
+  - typing_extensions=4.12.2
   - wcwidth=0.2.5
   - wheel=0.41.2
   - xz=5.4.5
+  - zeromq=4.3.5
   - zlib=1.2.13
   - pip:
       - absl-py==0.15.0
@@ -47,29 +63,34 @@ dependencies:
       - cachetools==5.3.2
       - certifi==2024.2.2
       - charset-normalizer==3.3.2
+      - configparser==7.1.0
       - contourpy==1.1.1
       - csbdeep==0.7.4
       - cycler==0.12.1
       - flatbuffers==1.12
       - fonttools==4.49.0
+      - funcsigs==1.0.2
       - gast==0.3.3
       - google-auth==2.28.1
       - google-auth-oauthlib==0.4.6
       - google-pasta==0.2.0
+      - gputools==0.2.14
       - grpcio==1.32.0
       - h5py==2.10.0
       - idna==3.6
       - imageio==2.34.0
       - importlib-metadata==7.0.1
+      - importlib-resources==6.4.4
       - keras-preprocessing==1.1.2
       - kiwisolver==1.4.5
       - llvmlite==0.39.1
+      - mako==1.3.5
       - markdown==3.5.2
       - markupsafe==2.1.5
       - matplotlib==3.6.3
       - networkx==3.1
       - numba==0.56.4
-      - numpy==1.19.5
+      - numpy==1.23.5
       - oauthlib==3.2.2
       - opencv-python==4.9.0.80
       - opt-einsum==3.3.0
@@ -79,10 +100,13 @@ dependencies:
       - protobuf==3.20.3
       - pyasn1==0.5.1
       - pyasn1-modules==0.3.0
+      - pyopencl==2024.2.7
       - pyparsing==3.1.1
       - python-dateutil==2.8.2
-      - pytz==2025.2
+      - pytools==2024.1.13
+      - pytz==2024.2
       - pywavelets==1.4.1
+      - reikna==0.8.0
       - requests==2.31.0
       - requests-oauthlib==1.3.1
       - rsa==4.9
@@ -98,10 +122,8 @@ dependencies:
       - termcolor==1.1.0
       - tifffile==2023.7.10
       - tqdm==4.66.2
-      - typing-extensions==3.7.4.3
-      - tzdata==2025.2
+      - tzdata==2024.1
       - urllib3==2.2.1
       - werkzeug==3.0.1
       - wrapt==1.12.1
       - zipp==3.17.0
-prefix: /home/guoj5/anaconda3/envs/stardist_cuda_11_0_new

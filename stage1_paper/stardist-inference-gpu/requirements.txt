@@ -1,100 +1,98 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: linux-64
-_libgcc_mutex=0.1=main
-_openmp_mutex=5.1=1_gnu
-absl-py=0.15.0=pypi_0
-asttokens=2.0.5=pyhd3eb1b0_0
-astunparse=1.6.3=pypi_0
-backcall=0.2.0=pyhd3eb1b0_0
-ca-certificates=2023.12.12=h06a4308_0
-cachetools=5.3.2=pypi_0
-certifi=2024.2.2=pypi_0
-charset-normalizer=3.3.2=pypi_0
-contourpy=1.1.1=pypi_0
-csbdeep=0.7.4=pypi_0
-cudatoolkit=11.0.3=h15472ef_8
-cudnn=8.0.4=cuda11.0_0
-cycler=0.12.1=pypi_0
-decorator=5.1.1=pyhd3eb1b0_0
-executing=0.8.3=pyhd3eb1b0_0
-flatbuffers=1.12=pypi_0
-fonttools=4.49.0=pypi_0
-gast=0.3.3=pypi_0
-google-auth=2.28.1=pypi_0
-google-auth-oauthlib=0.4.6=pypi_0
-google-pasta=0.2.0=pypi_0
-grpcio=1.32.0=pypi_0
-h5py=2.10.0=pypi_0
-idna=3.6=pypi_0
-imageio=2.34.0=pypi_0
-importlib-metadata=7.0.1=pypi_0
-ipython=8.12.2=py38h06a4308_0
-jedi=0.18.1=py38h06a4308_1
-keras-preprocessing=1.1.2=pypi_0
-kiwisolver=1.4.5=pypi_0
-ld_impl_linux-64=2.38=h1181459_1
-libffi=3.4.4=h6a678d5_0
-libgcc-ng=11.2.0=h1234567_1
-libgomp=11.2.0=h1234567_1
-libstdcxx-ng=11.2.0=h1234567_1
-llvmlite=0.39.1=pypi_0
-markdown=3.5.2=pypi_0
-markupsafe=2.1.5=pypi_0
-matplotlib=3.6.3=pypi_0
-matplotlib-inline=0.1.6=py38h06a4308_0
-ncurses=6.4=h6a678d5_0
-networkx=3.1=pypi_0
-numba=0.56.4=pypi_0
-numpy=1.19.5=pypi_0
-oauthlib=3.2.2=pypi_0
-opencv-python=4.9.0.80=pypi_0
-openssl=3.0.13=h7f8727e_0
-opt-einsum=3.3.0=pypi_0
-packaging=23.2=pypi_0
-parso=0.8.3=pyhd3eb1b0_0
-pexpect=4.8.0=pyhd3eb1b0_3
-pickleshare=0.7.5=pyhd3eb1b0_1003
-pillow=10.2.0=pypi_0
-pip=23.3.1=py38h06a4308_0
-prompt-toolkit=3.0.43=py38h06a4308_0
-protobuf=3.20.3=pypi_0
-ptyprocess=0.7.0=pyhd3eb1b0_2
-pure_eval=0.2.2=pyhd3eb1b0_0
-pyasn1=0.5.1=pypi_0
-pyasn1-modules=0.3.0=pypi_0
-pygments=2.15.1=py38h06a4308_1
-pyparsing=3.1.1=pypi_0
-python=3.8.18=h955ad1f_0
-python-dateutil=2.8.2=pypi_0
-pywavelets=1.4.1=pypi_0
-readline=8.2=h5eee18b_0
-requests=2.31.0=pypi_0
-requests-oauthlib=1.3.1=pypi_0
-rsa=4.9=pypi_0
-scikit-image=0.19.3=pypi_0
-scipy=1.10.1=pypi_0
-setuptools=68.2.2=py38h06a4308_0
-six=1.15.0=pypi_0
-sqlite=3.41.2=h5eee18b_0
-stack_data=0.2.0=pyhd3eb1b0_0
-stardist=0.8.5=pypi_0
-tensorboard=2.11.2=pypi_0
-tensorboard-data-server=0.6.1=pypi_0
-tensorboard-plugin-wit=1.8.1=pypi_0
-tensorflow=2.4.4=pypi_0
-tensorflow-estimator=2.4.0=pypi_0
-termcolor=1.1.0=pypi_0
-tifffile=2023.7.10=pypi_0
-tk=8.6.12=h1ccaba5_0
-tqdm=4.66.2=pypi_0
-traitlets=5.7.1=py38h06a4308_0
-typing-extensions=3.7.4.3=pypi_0
-urllib3=2.2.1=pypi_0
-wcwidth=0.2.5=pyhd3eb1b0_0
-werkzeug=3.0.1=pypi_0
-wheel=0.41.2=py38h06a4308_0
-wrapt=1.12.1=pypi_0
-xz=5.4.5=h5eee18b_0
-zipp=3.17.0=pypi_0
-zlib=1.2.13=h5eee18b_0
+absl-py==0.15.0
+asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+astunparse==1.6.3
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+cachetools==5.3.2
+certifi==2024.2.2
+charset-normalizer==3.3.2
+comm @ file:///home/conda/feedstock_root/build_artifacts/comm_1710320294760/work
+configparser==7.1.0
+contourpy==1.1.1
+csbdeep==0.7.4
+cycler==0.12.1
+debugpy @ file:///croot/debugpy_1690905042057/work
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1643888246732/work
+executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+flatbuffers==1.12
+fonttools==4.49.0
+funcsigs==1.0.2
+gast==0.3.3
+google-auth==2.28.1
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+gputools==0.2.14
+grpcio==1.32.0
+h5py==2.10.0
+idna==3.6
+imageio==2.34.0
+importlib-metadata==7.0.1
+importlib_resources==6.4.4
+ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1719845459717/work
+ipython @ file:///croot/ipython_1691532092695/work
+jedi @ file:///tmp/build/80754af9/jedi_1644315233700/work
+jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1654730843242/work
+jupyter_core @ file:///home/conda/feedstock_root/build_artifacts/jupyter_core_1710257397447/work
+Keras-Preprocessing==1.1.2
+kiwisolver==1.4.5
+llvmlite==0.39.1
+Mako==1.3.5
+Markdown==3.5.2
+MarkupSafe==2.1.5
+matplotlib==3.6.3
+matplotlib-inline @ file:///opt/conda/conda-bld/matplotlib-inline_1662014470464/work
+nest_asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1705850609492/work
+networkx==3.1
+numba==0.56.4
+numpy==1.23.5
+oauthlib==3.2.2
+opencv-python==4.9.0.80
+opt-einsum==3.3.0
+packaging==23.2
+pandas==2.0.3
+parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+pillow==10.2.0
+platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_1715777629804/work
+prompt-toolkit @ file:///croot/prompt-toolkit_1704404351921/work
+protobuf==3.20.3
+psutil @ file:///opt/conda/conda-bld/psutil_1656431268089/work
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+pyasn1==0.5.1
+pyasn1-modules==0.3.0
+Pygments @ file:///croot/pygments_1684279966437/work
+pyopencl==2024.2.7
+pyparsing==3.1.1
+python-dateutil==2.8.2
+pytools==2024.1.13
+pytz==2024.2
+PyWavelets==1.4.1
+pyzmq @ file:///croot/pyzmq_1705605076900/work
+reikna==0.8.0
+requests==2.31.0
+requests-oauthlib==1.3.1
+rsa==4.9
+scikit-image==0.19.3
+scipy==1.10.1
+six==1.15.0
+stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+stardist==0.8.5
+tensorboard==2.11.2
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.4.4
+tensorflow-estimator==2.4.0
+termcolor==1.1.0
+tifffile==2023.7.10
+tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1648827257044/work
+tqdm==4.66.2
+traitlets @ file:///croot/traitlets_1671143879854/work
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1717802530399/work
+tzdata==2024.1
+urllib3==2.2.1
+wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+Werkzeug==3.0.1
+wrapt==1.12.1
+zipp==3.17.0
