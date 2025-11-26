@@ -126,15 +126,13 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### 3. Finetuned with Enriched Data 
 
-Due to storage limits, the **best model weights** are listed below and saved in [model_weights](./model_weights/); all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
-
-
   Finetuned Models | data processing| Weights from Strategies | Implementations|
   |:---:|:---:|:---:|:---:|
   | StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)| |
   |Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
   | CellViT   |  RGB | | |
 
+Due to storage limits, the **best model weights** are listed above and saved in [model_weights](./model_weights/); all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 
 ## License
 
