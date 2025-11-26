@@ -190,12 +190,20 @@ If you find this repository useful, please consider giving a ⭐ and citing our 
   organization={SPIE}
 }
 
-@article{guo2024good,
-  title={How Good Are We? Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment},
-  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
-  journal={arXiv preprint arXiv:2411.00078},
-  year={2024}
+
+@article{guo_evaluating_2025,
+  author       = {Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and Wang, Yu and Zhao, Shilin and Chang, Catie and Wilkes, Mitchell and Fogo, Agnes and Yin, Mengmeng and Yang, Haichun and Huo, Yuankai},
+  title        = {Evaluating cell AI foundation models in kidney pathology with human-in-the-loop enrichment},
+  journal      = {Communications Medicine},
+  volume       = {5},
+  year         = {2025},
+  number       = {1},
+  pages        = {495},
+  doi          = {10.1038/s43856-025-01205-x},
+  url          = {https://doi.org/10.1038/s43856-025-01205-x},
+  month        = nov
 }
+
 
 @article{wang2025evaluating,
   title={Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models},
