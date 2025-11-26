@@ -112,11 +112,11 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### 1. Individual Cell FMs Inference and Ratings
 
-Model | Original Baseline Inference code|
-|:---:|:---:|
-| StarDist (Histo.) | [StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
-| Cellpose  | [Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
-| CellViT  | [CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
+  Model | Original Baseline Inference code|
+  |:---:|:---:|
+  | StarDist (Histo.) | [StarDist Inference](../stage1_paper/stardist-inference-gpu/README.md)|
+  | Cellpose  | [Cellpose 2.0 Inference](../stage1_paper/cellpose-inference-gpu/README.md) |
+  | CellViT  | [CellViT Inference](../stage1_paper/cellvit-inference-gpu/README.md)|
 
 - We also have the new cell FMs (**Cellpose-SAM, CellViT++ variants released 2024 Aug. - 2025 Aug.**) assessment, in [**stage3_paper folder**](../stage3_paper/).
 
@@ -126,14 +126,15 @@ Model | Original Baseline Inference code|
 
 ### 3. Finetuned with Enriched Data 
 
+Due to storage limits, the **best model weights** are listed below and saved in [model_weights](./model_weights/); all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 
-Finetuned Models | data processing| Weights from Strategies | Implementations|
-|:---:|:---:|:---:|:---:|
-| StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)| |
-|Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
-| CellViT   |  RGB | | |
 
-Due to storage limites, the **best model weights** for <ins>each strategy</ins> are provided in [(model_weights/stardist)](../model_weights/stardist/), and all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
+  Finetuned Models | data processing| Weights from Strategies | Implementations|
+  |:---:|:---:|:---:|:---:|
+  | StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)| |
+  |Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
+  | CellViT   |  RGB | | |
+
 
 ## License
 
