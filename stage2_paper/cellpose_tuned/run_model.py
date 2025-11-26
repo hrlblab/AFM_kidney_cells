@@ -12,7 +12,9 @@ from pathlib import Path
 data_dir = '/path/to/images_processed'  # path to processed images (dapi-like)
 rgb_dir = '/path/to/png/folder'         # path to rgb image files directory 
 output_dir = '/path/to/output'          # inference output directory 
-model_path = '/path/to/cellpose_models/finetuned_model'
+model_path = '/path/to/weight/folder/finetuned_model'   # path to the finetuned model 
+# example: model_path = '/path/to/stage2_paper/model_weights/cellpose/Easy_100%/finetuned_model'
+
 os.makedirs(output_dir, exist_ok=True)
 
 X = sorted(glob.glob(os.path.join(data_dir, '*.npy')))

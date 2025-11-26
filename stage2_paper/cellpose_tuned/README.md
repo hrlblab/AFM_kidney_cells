@@ -115,7 +115,7 @@ python evaluate.py --predictions /path/to/model/predictions/folder --gt /path/to
 
 2. Create a training configuration file (see [easy_25percent.yaml](train_configs/easy_25percent.yaml) for an example).
 
-3. Run training:
+3. Run training, the `finetuned_model` file is saved at the `save_path` defined in the config file.
 ```bash
 python train_model.py --config /path/to/config.yaml
 ```
