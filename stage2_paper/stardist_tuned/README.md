@@ -77,7 +77,7 @@ val
 ```
 ### Training 
 
-Specifically, assign paths to train, val folders, and output model before running [train_model.ipynb](./train_model.ipynb)
+Specifically, assign paths to "train, val folders, and output model" before running [train_model.ipynb](./train_model.ipynb)
 
 ```python
 train_image_dir = '/path/to/images' # folder of png files

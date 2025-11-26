@@ -22,16 +22,21 @@
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
-## 🔥 Last Updated: 2025.11.25
-- **[2025.11.25]** Stage 2 fine-tuned model weights and code instructions: Cellpose
-  
-  → [stage2_paper](stage2_paper) directory
-- **[2025.11.18]** Masks/Predictions to Geojson (Qupath): [mask_to_geojson_qupath.py](./mask_to_geojson_qupath.py)
-- **[2025.11.16]** Patch-level inference codes for Stage 3 baseline models (**CellViT++, Cellpose-SAM**):  
+## 🔥 Last Updated: 2025.11.26
+- **[2025.11.25]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist**
+
+  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies)
+
+  → [google drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing) (all weights) 
+
+- **[2025.11.16]** Stage 3 baseline models Inference (**CellViT++, Cellpose-SAM**):  
   → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
-- **[2025.11.05]** Patch-level inference codes for Stage 1 baseline models (**CellViT, StarDist, Cellpose**) are available in:  
+- **[2025.11.05]** Stage 1, 2 baseline models Inference (**CellViT, StarDist, Cellpose**) are available in:  
   → [Model Summary Table](#-cell-fms-inference-pipeline--model-summary)  
   → [stage1_paper](stage1_paper) directory
+
+
+- **[Use in QuPath]** Masks/Predictions converted to Geojson (Qupath): [mask_to_geojson_qupath.py](./mask_to_geojson_qupath.py)
 
 - **[In Progress]** Annotated dataset curation for the **2nd KPI Challenge**.
 
@@ -132,21 +137,21 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 
 ## 🔁 Continuous Model Fine-Tuning with Enriched Data
 
-<p align="center">
+<!-- <p align="center">
   <img src="assets/HITL-pipelines.png" width="800">
-</p>
+</p> -->
 
 
-- **Finetuning**: Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024. Detail see [stage2_paper folder](./stage2_paper/README.md)
+- **Finetuning**: Stage 2 focuses on validating the CellFM-HITL framework and uses Cell FMs released before August 2024. Detail see [stage2_paper folder](./stage2_paper/README.md) on how to do the inference and training.
 
 
-
-  Finetuned Models | data processing| Weights | Implementations|
+  Finetuned Models | data processing| Best Weights from Strategies| Implementations|
   |:---:|:---:|:---:|:---:|
-  | StarDist (Histo.) |  RGB | | [stardist_tuned](./stage2_paper/stardist_tuned/README.md)|
-  |Cellpose Finetuned| DAPI-like | [Easy_100%](./stage2_paper/model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./stage2_paper/cellpose_tuned/README.md)
+  | StarDist (Histo.) |  RGB |[Easy, Hard, Combined](./stage2_paper/model_weights/stardist/) | [stardist_tuned](./stage2_paper/stardist_tuned/README.md)|
+  |Cellpose Finetuned| DAPI-like | [Easy](./stage2_paper/model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./stage2_paper/cellpose_tuned/README.md)
   | CellViT   |  RGB | | |
 
+- **Google Drive**:Due to storage limits, the **best model weights** are listed above and saved in [model_weights](./stage2_paper/model_weights/); all model weights are available on this [Google Drive Link](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 
 
 
