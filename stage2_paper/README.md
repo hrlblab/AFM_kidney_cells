@@ -128,7 +128,7 @@ This work have experimented the following **annotation enrichment strategies** f
 
   Finetuned Models | data processing| Weights from Strategies | Implementations|
   |:---:|:---:|:---:|:---:|
-  | StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)| |
+  | StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)|[stardist_tuned](./stardist_tuned/README.md) |
   |Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
   | CellViT   |  RGB | | |
 
