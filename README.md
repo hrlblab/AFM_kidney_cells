@@ -143,7 +143,7 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 
   Finetuned Models | data processing| Weights | Implementations|
   |:---:|:---:|:---:|:---:|
-  | StarDist (Histo.) |  RGB | | |
+  | StarDist (Histo.) |  RGB | | [stardist_tuned](./stage2_paper/stardist_tuned/README.md)|
   |Cellpose Finetuned| DAPI-like | [Easy_100%](./stage2_paper/model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./stage2_paper/cellpose_tuned/README.md)
   | CellViT   |  RGB | | |
 
