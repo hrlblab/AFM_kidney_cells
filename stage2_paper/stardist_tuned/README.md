@@ -12,3 +12,44 @@ If already created the conda environment and installed packages for stardist inf
 ```bash
 pip install gputools==0.2.14
 ```
+
+## Model Weights and Inference
+
+
+
+## Training Instructions 
+
+### Data and Paths 
+
+Prepare `images` (.png files) and `labels` (.npy files) for both training and validation. Some examples are provided in `data_dummy`.
+
+```bash
+train_hard_100
+├── images
+│   ├── 00295.png
+│   ├── ...
+├── labels
+│   ├── 00295.npy
+│   ├── ...
+
+val
+├── images
+│   ├── xxx.png
+│   ├── ...
+├── labels
+│   ├── xxx.npy
+│   ├── ...
+```
+### Training 
+
+Specifically, assign paths to train, val folders, and output model before running [train_model.ipynb](./train_model.ipynb)
+
+```python
+train_image_dir = '/path/to/images' # folder of png files
+train_mask_dir = 'path/to/labels'   # folder of npy lables 
+
+val_image_dir = '/path/to/val/images' # folder of png files
+val_mask_dir = 'path/to/val/labels'   # folder of npy lables 
+
+model_name = '/path/to/saved/model/folder' # the finetuned model saved here 
+```
