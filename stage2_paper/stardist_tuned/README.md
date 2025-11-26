@@ -15,7 +15,13 @@ pip install gputools==0.2.14
 
 ## Model Weights and Inference
 
+- Kidney-finetuned StarDist models show improved performance, specially recall and F1 across all three annotation strategies while maintaining high precision. 
 
+- Due to the storage limites, the **best weights** for <ins>each strategy</ins> are provided in [(model_weights/stardist)](../model_weights/stardist/) and available for download on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
+
+<p align="center">
+  <img src="../../assets/stardist_performance.png" width="800">
+</p>
 
 ## Training Instructions 
 
