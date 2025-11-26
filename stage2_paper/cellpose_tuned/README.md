@@ -76,7 +76,7 @@ In this work, Cellpose model fine-tuned with all "Easy" labels achieves the best
 
 
 <p align="center">
-  <img src="../../assets/cellpose_performance.png" width="500">
+  <img src="../../assets/cellpose_performance.png" width="800">
 </p>
 
 ### Model Inference
