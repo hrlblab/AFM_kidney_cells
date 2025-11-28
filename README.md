@@ -25,7 +25,7 @@ This **ongoing project** welcomes researchers to **share** their work with the *
 ## 🔥 Last Updated: 2025.11.26
 - **[2025.11.25]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist**
 
-  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies)
+  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies), [Qupath models](./stage2_paper/model_weights/stardist-qupath/) (Trained StarDist models for use with QuPath.)
 
   → [google drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing) (all weights) 
 
