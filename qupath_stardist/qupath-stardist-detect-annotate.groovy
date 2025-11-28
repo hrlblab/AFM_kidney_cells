@@ -17,7 +17,7 @@ import qupath.lib.scripting.QP
 // that takes 3 channel RGB as input (e.g. he_heavy_augment.pb)
 // You can find some at https://github.com/qupath/models
 // (Check credit & reuse info before downloading)
-def modelPath = "/path/to/ONNX_SavedModel/saved_model_opencv_opset11.pb"
+def modelPath = "/home/guoj5/Documents/github/AFM_kidney_cells/stage2_paper/model_weights/stardist-qupath/model_hard.pb"
 
 // Customize how the StarDist detection should be applied
 // Here some reasonable default options are specified

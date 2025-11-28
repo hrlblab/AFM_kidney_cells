@@ -23,9 +23,11 @@
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
 ## 🔥 Last Updated: 2025.11.27
-- **[2025.11.25]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist**
+- **[2025.11.27]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist**
 
-  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies), [QuPath models](./stage2_paper/model_weights/stardist-qupath/) (Trained StarDist models for use with QuPath.)
+  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies), [QuPath StarDist model_weights](./stage2_paper/model_weights/stardist-qupath/) (.pb files)
+
+  → [QuPath StarDist Plugin](./qupath_stardist/): How to installed and use our pretrained models in QuPath.
 
   → [google drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing) (all weights) 
 
@@ -82,7 +84,7 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
 
 | Year–Month | Model                 | Backbone        | Post-processing       | Original Repo                                 | Model Paper                                                                                  | Custom Patch-Level Pipeline                         | Our Work                                                                                                               |
 |-------------|----------------------|-----------------|-----------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| 2022 Mar   | **StarDist (Histo.)** | U-Net           | Star-convex Polygon   | [Link](https://github.com/stardist/stardist)  | [ISBI 2022](https://arxiv.org/abs/2203.02284)                                                | [StarDist Inference](stage1_paper/stardist-inference-gpu) | [Medical Imaging 2025](https://arxiv.org/abs/2408.06381) (Stage 1); <br>[Nat. Commun. Med. 2025](https://www.nature.com/articles/s43856-025-01205-x) (Stage 2)|
+| 2022 Mar   | **StarDist (Histo.)** | U-Net           | Star-convex Polygon   | [Link](https://github.com/stardist/stardist)  | [ISBI 2022](https://arxiv.org/abs/2203.02284)                                                | [StarDist Inference](stage1_paper/stardist-inference-gpu); [QuPath Plugin](./qupath_stardist/README.md)| [Medical Imaging 2025](https://arxiv.org/abs/2408.06381) (Stage 1); <br>[Nat. Commun. Med. 2025](https://www.nature.com/articles/s43856-025-01205-x) (Stage 2)|
 | 2022 Nov   | **Cellpose**          | U-Net           | GradientFlow Tracking | [Link](https://github.com/MouseLand/cellpose) | [Nat. Methods 2021](https://www.nature.com/articles/s41592-020-01018-x)                      | [Cellpose Inference](stage1_paper/cellpose-inference-gpu)                      | (same as above)                                                                                                       |
 | 2023 Oct   | **CellViT**           | ViT (HIPT, SAM) | HoVer-Net             | [Link](https://github.com/TIO-IKIM/CellViT)   | [Med. Image Anal. 2023](https://www.sciencedirect.com/science/article/pii/S1361841524000689) | [CellViT Inference](stage1_paper/cellvit-inference-gpu)                       | (same as above)                                                                                                       |
 
