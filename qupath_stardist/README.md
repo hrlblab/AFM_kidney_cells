@@ -3,7 +3,6 @@
 This guide explains how to install the **StarDist extension** in **QuPath**, load a pretrained model, and run nucleus detection on whole-slide images or smaller patches.
 
 
-
 ## 1. Install QuPath
 Download and install **QuPath v0.5.0** (the version I used):  
 https://qupath.github.io
@@ -14,15 +13,15 @@ https://qupath.github.io
 
 1. For QuPath v0.5.0, the [qupath-extension-stardist-0.5.0.jar](./qupath-extension-stardist-0.5.0.jar) has already been downloaded.
 
-2. For other versions:
+   For other versions:
    - Visit the StarDist extension [releases page](https://github.com/qupath/qupath-extension-stardist/releases) and download the appropriate `.jar` file  
 
-2.Drag the `.jar` file into QuPath.  
+2. Drag the `.jar` file into QuPath.  
 
 3. Verify the installation within QuPath via **Extensions** (there is **StarDist**)
 
 <p align="center">
-  <img src="../assets/qupath-ext.png" width="500">
+  <img src="../assets/qupath-ext.png" width="800">
 </p>
 
 ---
@@ -97,7 +96,7 @@ def modelPath = '/path/to/model_weights/stardist-qupath/model_hard.pb'
 
 ## 7. Flexible Detection-Annotations groovy script
 
-The original groovy script will generate **QuPath Detections**
+The original groovy script (identical to [qupath-stardist-detect.groovy](./qupath-stardist-detect.groovy)) will generate **QuPath Detections**
 
 [qupath-stardist-detect-annotate.groovy](./qupath-stardist-detect-annotate.groovy) outputs **QuPath annotations**, making manual corrections easier.
 
