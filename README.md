@@ -22,7 +22,7 @@
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
-## 🔥 Last Updated: 2025.11.26
+## 🔥 Last Updated: 2025.11.27
 - **[2025.11.25]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist**
 
   → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies), [QuPath models](./stage2_paper/model_weights/stardist-qupath/) (Trained StarDist models for use with QuPath.)
