@@ -157,17 +157,15 @@ If you find this repository useful, please consider giving a ⭐ and citing our 
 }
 
 
-@article{guo_evaluating_2025,
-  author       = {Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and Wang, Yu and Zhao, Shilin and Chang, Catie and Wilkes, Mitchell and Fogo, Agnes and Yin, Mengmeng and Yang, Haichun and Huo, Yuankai},
-  title        = {Evaluating cell AI foundation models in kidney pathology with human-in-the-loop enrichment},
-  journal      = {Communications Medicine},
-  volume       = {5},
-  year         = {2025},
-  number       = {1},
-  pages        = {495},
-  doi          = {10.1038/s43856-025-01205-x},
-  url          = {https://doi.org/10.1038/s43856-025-01205-x},
-  month        = nov
+@article{guo2025evaluating,
+  title={Evaluating cell AI foundation models in kidney pathology with human-in-the-loop enrichment},
+  author={Guo, Junlin and Lu, Siqi and Cui, Can and Deng, Ruining and Yao, Tianyuan and Tao, Zhewen and Lin, Yizhe and Lionts, Marilyn and Liu, Quan and Xiong, Juming and others},
+  journal={Communications Medicine},
+  volume={5},
+  number={1},
+  pages={495},
+  year={2025},
+  publisher={Nature Publishing Group}
 }
 
 
