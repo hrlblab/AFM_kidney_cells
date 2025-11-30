@@ -99,7 +99,10 @@ To run inference with the trained model, use the path specified in `model_name` 
 
 ### Prepare QuPath model (optional)
 
-To generate QuPath-compatible models, convert TensorFlow weights to ONNX format using `tf2onnx.ipynb`. The output `.pb` file can be used in QuPath. For Usage, see [Use Models in QuPath](#use-models-in-qupath) for details.  
+- To convert Onnx, see `tf2onnx.ipynb`. The output `.pb` file can be used in QuPath. (we followed QuPath official implementation, [here](https://github.com/qupath/models/tree/main/stardist#conversion))
+
+
+- For Usage, see [Use Models in QuPath](#use-models-in-qupath) for details.  
 
 ## Citation
 
