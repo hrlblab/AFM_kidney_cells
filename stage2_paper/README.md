@@ -58,6 +58,7 @@ This work have experimented the following **annotation enrichment strategies** f
 
 - We also experimented each annotation enrichment strategy with different dataset scales (25%, 50% ... 100%)
 
+<a name="experiment-table"></a>
 <p align="center">
   <img src="../assets/experiment_table.png" width="800">
 </p>
@@ -140,6 +141,23 @@ This work have experimented the following **annotation enrichment strategies** f
 
 - Representative fine-tuned Qupath models in [stardist-qupath](./model_weights/stardist-qupath).
 
+### 5. Weighted Sampling in Training
+
+- **Annotation Types:** We used "easy", "hard"  or a "combined set" of annotations.[See experiment table](#experiment-table). 
+
+- The combined set is highly imbalanced (more "easy" samples than "hard").
+
+  - **Weighted sampling**: The [weighted_sampling.py](./weighted_sampling_examples/weighted_sampling.py) script first concatenates `types.csv` from `fold_easy` and `fold_hard` folders and applies weighted sampling per [Supplementary Information 1](./supp_info.pdf). 
+
+    ```python
+      # re-weight each row (sample) after concating types.csv 
+      def calculate_class_weights(df, label_column,gamma):
+          class_counts = df[label_column].value_counts().to_dict()
+          total_samples = len(df)
+          class_weights = {cls: total_samples / (gamma * count + (1-gamma)*total_samples) for cls, count in class_counts.items()}
+          return class_weights 
+      ```
+  - The output CSV contains image and label paths for the combined set, ready for training data prep.
 
 
 ## License
