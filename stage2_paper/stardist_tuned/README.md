@@ -102,7 +102,11 @@ To run inference with the trained model, use the path specified in `model_name` 
 - To convert Onnx, see `tf2onnx.ipynb`. The output `.pb` file can be used in QuPath. (we followed QuPath official implementation, [here](https://github.com/qupath/models/tree/main/stardist#conversion))
 
 
-- For Usage, see [Use Models in QuPath](#use-models-in-qupath) for details.  
+- For Usage, see [Use Models in QuPath](#use-models-in-qupath) for details. 
+
+### Weighted Sampling (optional)
+
+- In our work, we used "easy", "hard" annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf) and implementations [here](../README.md#5-weighted-sampling-in-training)).
 
 ## Citation
 

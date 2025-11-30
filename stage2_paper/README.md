@@ -157,7 +157,7 @@ This work have experimented the following **annotation enrichment strategies** f
           class_weights = {cls: total_samples / (gamma * count + (1-gamma)*total_samples) for cls, count in class_counts.items()}
           return class_weights 
       ```
-  - The output CSV contains image and label paths for the combined set, ready for training data prep.
+  - The output CSV contains image and label paths for the combined set, ready for constructing training data.
 
 
 ## License

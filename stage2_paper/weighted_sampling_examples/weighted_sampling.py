@@ -13,7 +13,7 @@ def calculate_class_weights(df, label_column, gamma):
 
 if __name__ == "__main__":
 
-    # image annotation types 
+    # image annotation types (example paths)
     csv_paths =[f'./fold_easy/types.csv', 
         f'./fold_hard.csv']
 
