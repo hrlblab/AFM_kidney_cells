@@ -52,9 +52,15 @@ python run_model.py \
     --output_dir /path/to/output/directory
 ```
 
+### Use Models in QuPath 
+
+- Since StarDist achieves the best performance after fine-tuning on our kidney data, we also provide guide on [*"How to installed and use our pretrained models in QuPath"*](../qupath_stardist/README.md) 
+
+- Similarly, Representative fine-tuned Qupath models in [stardist-qupath](../model_weights/stardist-qupath/).  
+
 ## Training Instructions 
 
-### Data  
+### Training Data 
 
 Prepare `images` (.png files) and `labels` (.npy files) for both training and validation. Some examples are provided in `data_dummy`.
 
@@ -90,6 +96,10 @@ model_name = '/path/to/saved/model/folder' # the finetuned model saved here
 ```
 
 To run inference with the trained model, use the path specified in `model_name` as the `--model_dir` argument in the inference command above. See the ["Finetuned Model Inference"](#finetuned-model-inference) section for details. 
+
+### Prepare QuPath model (optional)
+
+To generate QuPath-compatible models, convert TensorFlow weights to ONNX format using `tf2onnx.ipynb`. The output `.pb` file can be used in QuPath. For Usage, see [Use Models in QuPath](#use-models-in-qupath) for details.  
 
 ## Citation
 

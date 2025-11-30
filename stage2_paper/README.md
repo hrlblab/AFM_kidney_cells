@@ -64,9 +64,9 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### Performance after Finetuning 
 
-- Baselines: We evaluated each foundation model’s (Cellpose, StarDist, CellViT) pre-trained weights on our hold-out test set.
+- Evaluated on a hold-out test set.
 
-- F1-score (and full metrics) comparisons across training/annotation strategies are shown (below).
+- F1-score across training/annotation strategies
 
 <br>
 
@@ -74,14 +74,14 @@ This work have experimented the following **annotation enrichment strategies** f
   <img src="../assets/results-f1.png" width="800">
 </p>
 
-<br>
+- Full metrics across training/annotation strategies
 
 <p align="center">
   <img src="../assets/f1-recall-prec.png" width="800">
 </p>
 
 
-- Qualitative results. Areas of improvement highlighted by rectangles.
+- Qualitative: Areas of improvement highlighted by rectangles.
 
 <p align="center">
   <img src="../assets/qualitative.png" width="600">
@@ -89,9 +89,9 @@ This work have experimented the following **annotation enrichment strategies** f
 
 #### Observation 
 
-- **Baseline performance evaluation**, CellViT achieves the highest F1 score of 0.78. Kidney-targeted FMs still required.
+- **Baseline performance**, CellViT achieves the highest F1 score of 0.78. Kidney-targeted FMs still required.
 - **Fine-tuning with enriched data** improves all three models, with StarDist achieving the highest F1 score of 0.82. 
-- **Annotation Enrichment**: We found the **combination** of the <ins>foundation model–generated pseudo-labels</ins> and <ins>a subset of pathologist-corrected hard patches</ins> yields consistent performance gains across all models.
+- **Annotation Enrichment**: Combining <ins>foundation model–generated pseudo-labels</ins> and <ins>a subset of pathologist-corrected hard patches</ins> yields consistent performance gains across all models.
 
 
  ### This CellFM-HITL Assessment and Enhancement Framework can be Iterative.
@@ -100,7 +100,7 @@ This work have experimented the following **annotation enrichment strategies** f
   <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage3--Paper-SPIE-26'></a> 
 </p>
 
-- In our Stage 3 work, with newer Cell AI FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now correctly labeled by these newer models (rated as “Good”). 
+- With recent FMs (2025) such as CellViT++[Virchow] and Cellpose-SAM, a portion of the **previously rated “medium” or challenging patches** are now labeled by these newer models (rated as “Good”). 
 
 <br>
 
@@ -133,6 +133,14 @@ This work have experimented the following **annotation enrichment strategies** f
   | CellViT   |  RGB | | |
 
 - Due to storage limits, the **best model weights** are listed above and saved in [model_weights](./model_weights/); all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
+
+### 4. QuPath-StarDist Models
+
+- StarDist achieves the best performance after fine-tuning on our kidney data. We provide [*"How to installed and use our pretrained models in QuPath"*](../qupath_stardist/README.md) 
+
+- Representative fine-tuned Qupath models in [stardist-qupath](./model_weights/stardist-qupath).
+
+
 
 ## License
 
