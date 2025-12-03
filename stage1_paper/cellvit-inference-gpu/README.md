@@ -37,7 +37,10 @@ conda activate <env_name>
 
 pip install -r requirements.txt
 ```
-The [enrionment.yml](CellViT/environment.yml) and [requirements.txt](CellViT/requirements.txt) are provided in CellViT folder.
+The `environment.yml` and `requirements.txt` files are taken from the original CellViT [<ins>GitHub repo</ins>](https://github.com/TIO-IKIM/CellViT/tree/main) (link here). 
+
+Installation should be straightforward, just ensure the inference script loads all required packages successfully.
+
 
 ## Usage 
 
