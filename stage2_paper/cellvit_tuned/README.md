@@ -1,7 +1,7 @@
 # CellViT Framework Fine-tuning and Models
 
 ## Installation 
-The same conda environment used for training + inference as in [cellvit-inference-gpu](../../stage1_paper/cellvit-inference-gpu/README.md#installation).
+<!-- The same conda environment used for training + inference as in [cellvit-inference-gpu](../../stage1_paper/cellvit-inference-gpu/README.md#installation). -->
 
 ### Option 1: Use Conda
 
@@ -18,7 +18,7 @@ conda activate <env_name>
 
 pip install -r requirements.txt
 ```
-The `environment.yml` and `requirements.txt` files are taken from the original CellViT [<ins>GitHub repo</ins>](https://github.com/TIO-IKIM/CellViT/tree/main) (link here). 
+The [environment.yml](https://github.com/TIO-IKIM/CellViT/blob/main/environment.yml) and [requirements.txt](https://github.com/TIO-IKIM/CellViT/blob/main/requirements.txt) files are taken from the original CellViT [<ins>GitHub repo</ins>](https://github.com/TIO-IKIM/CellViT/tree/main) (link here). 
 
 
 ## Model Weights and Inference

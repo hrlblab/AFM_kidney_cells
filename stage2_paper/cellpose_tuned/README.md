@@ -124,7 +124,7 @@ In our work, we used these <ins>experimental training settings</ins>:
 
 - **Weighted Sampling:** We used "easy", "hard" annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf) and implementations [here](../README.md#5-weighted-sampling-in-training)).
 
-- **Configuration details:** See [Supplementary Information 2.2](../supp_info.pdf).
+- **Training Configurations:** See [Supplementary Information 2.2](../supp_info.pdf).
 
 
 

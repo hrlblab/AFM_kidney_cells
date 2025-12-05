@@ -143,9 +143,11 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### 5. Weighted Sampling in Training
 
-- **Annotation Types:** We used "easy", "hard"  or a "combined set" of annotations.[See experiment table](#experiment-table). 
+- **Annotation Types:** We used "easy", "hard"  or a "combined set" of annotations. 
 
-- The combined set is highly imbalanced (more "easy" samples than "hard").
+- Combined set is highly imbalanced (more "easy" samples than "hard").
+
+  - We provide dummy hard (`fold_hard`) and easy (`fold_easy`) dataset folders in a [weighted_sampling_examples](weighted_sampling_examples) folder.
 
   - **Weighted sampling**: The [weighted_sampling.py](./weighted_sampling_examples/weighted_sampling.py) script first concatenates `types.csv` from `fold_easy` and `fold_hard` folders and applies weighted sampling per [Supplementary Information 1](./supp_info.pdf). 
 
