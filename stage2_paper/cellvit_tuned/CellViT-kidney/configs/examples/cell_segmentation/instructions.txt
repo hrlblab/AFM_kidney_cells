@@ -1,0 +1,11 @@
+train_cellvit_copy.yaml: A copy of train_cellvit.yaml with some modification to reproduce the Pannuke training experiment
+
+train_cellvit_HV.yaml: A copy based on /logs_paper/PanNuke/CellViTHV/ViT256/Best-Setting
+
+train_cellvit_sweep: train_cellvit with sweep setup 
+
+train_cellvit_stardist: stardist post processing branch log from paper
+
+train_cellvit_experiment.yaml: The initial run of the cellvit_hv experiments for our kidney data on our nuclei instance segmentation task.
+
+./my_experiment_logs: A log of experiments (or ablation study) for our kidney data on our nuclei instance segmentation task 
