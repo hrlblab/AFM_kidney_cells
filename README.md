@@ -22,14 +22,18 @@
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
-## 🔥 Last Updated: 2025.11.27
-- **[2025.11.27]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist**
+## 🔥 Last Updated: 2025.12.7
+- **[2025.12.7]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist, CellViT**
 
-  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies), [QuPath StarDist model_weights](./stage2_paper/model_weights/stardist-qupath/) (.pb files)
+  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies)
 
-  → [QuPath StarDist Plugin](./qupath_stardist/): How to installed and use our pretrained models in QuPath.
+  → [Google drive link](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing): All model weights, CellViT finetuned checkpoints (due to storage limit) 
 
-  → [google drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing) (all weights) 
+  → [QuPath StarDist Plugin Guide](./qupath_stardist/): How to installed and use pretrained models in QuPath.
+  
+  → [Links to the finetuned StarDist QuPath model files](./stage2_paper/model_weights/stardist-qupath/) (.pb files for QuPath usage).
+
+
 
 - **[2025.11.16]** Stage 3 baseline models Inference (**CellViT++, Cellpose-SAM**):  
   → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
