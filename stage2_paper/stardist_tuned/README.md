@@ -58,6 +58,13 @@ python run_model.py \
 
 - Similarly, Representative fine-tuned Qupath models in [stardist-qupath](../model_weights/stardist-qupath/).  
 
+### Evaluation (optional)
+
+Run `evaluate.py` with the specified paths to the prediction and ground-truth label folders (`.npy` files).
+```bash
+python evaluate.py --predictions /path/to/model/predictions/folder --gt /path/to/labels/folder --log_csv /path/to/output_dir/metrics.csv 
+```
+
 ## Training Instructions 
 
 ### Training Data 

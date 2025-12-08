@@ -22,8 +22,50 @@ The [environment.yml](https://github.com/TIO-IKIM/CellViT/blob/main/environment.
 
 
 ## Model Weights and Inference
+Simply place image patches (512x512 PNG, 40x) into a dataset folder.
+
+### Model Checkpoints 
+
+The CellViT pre-trained checkpoint from CellViT paper can be found: 
+- [CellViT-SAM-H](https://drive.google.com/uc?export=download&id=1MvRKNzDW2eHbQb5rAgTEp6s2zAXHixRV) 🚀
+- [CellViT-256](https://drive.google.com/uc?export=download&id=1tVYAapUo1Xt8QgCN22Ne1urbbCZkah8q) (We used this HIPT-256 for Baseline evaluation)
+- [CellViT-SAM-H-x20](https://drive.google.com/uc?export=download&id=1wP4WhHLNwyJv97AK42pWK8kPoWlrqi30)
+- [CellViT-256-x20](https://drive.google.com/uc?export=download&id=1w99U4sxDQgOSuiHMyvS_NYBiz6ozolN2)
+
+Finetuned Model Weights:
+
+- The combined "Easy + Hard" annotations yields the best performance improvement for CellViT.
+
+- Due to storage limites, the best model weight [Easy_Hard_100%]() and all model weights/checkpoints are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
+
+<p align="center">
+  <img src="../../assets/cellvit_performance.png" width="800">
+</p>
+
+### Model Inference 
+
+```bash
+python /path/to/CellViT-kidney/cell_segmentation/inference/inference_cellvit_experiment_kidney.py \
+    --gpu 0 \
+    --model /path/to/checkpoint.pth \
+    --patching True \
+    --overlap 0 \
+    --dataset /path/to/dataset_folder \
+    --outdir /path/to/output
+```
+This script works the same way as the `inference_cellvit_experiment_ca.py` in [stage1_paper](../../stage1_paper/cellvit-inference-gpu/README.md#run-the-inference-script).
+
+### Evaluation (optional)
+
+
+Run `evaluate.py` with the specified paths to the prediction and ground-truth label folders (`.npy` files).
+```bash
+python /path/to/CellViT-kidney/cell_segmentation/evaluate.py --predictions /path/to/model/predictions/folder --gt /path/to/labels/folder --log_csv /path/to/output_dir/metrics.csv 
+```
 
 ## Training Instructions
+
+[ ] to do: update readme
 
 ## Citation
 

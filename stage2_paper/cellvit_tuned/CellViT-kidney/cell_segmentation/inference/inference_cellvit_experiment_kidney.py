@@ -74,22 +74,6 @@ from utils.logger import Logger
 from utils.tools import unflatten_dict
 from typing import Set
 
-def find_files(directory: str, format: str = '.svs') -> Set[str]:
-    """
-    Find all folders/subdirectories that contain files with the specified format.
-    :param directory: The root directory to search for files.
-    :param format: The type of the files to search for (default is '.svs', for the WSI file search).
-    :return: A set of directories containing files with the specified format
-    """
-    svs_directories = set()  # Use a set to store unique parent directories
-
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith(format):
-                svs_directories.add(root)  # Use add() to add unique directories
-
-    return svs_directories
-
 class MoNuSegInference:
     def __init__(
         self,
@@ -943,31 +927,15 @@ if __name__ == "__main__":
     configuration = configuration_parser.parse_arguments()
     print(configuration)
 
-    relative_input_path = os.path.basename(configuration['datasets_dir'])
-    path_to_patch_folder = configuration['datasets_dir']
-    absolute_output_path = configuration['outputs_dir']
+    inf = MoNuSegInference(
+    model_path=configuration["model"],
+    dataset_path=configuration["dataset"],  # path to input folder 
+    outdir=configuration["outdir"],         # path to output folder 
+    gpu=configuration["gpu"],
+    patching=configuration["patching"],
+    magnification=configuration["magnification"],
+    overlap=configuration["overlap"],)
 
-
-    dataset_dirs = list(find_files(path_to_patch_folder, format='.png'))
-    # inference on each folder
-    resume_dataset_dir = 0
-    for i in tqdm.tqdm(range(resume_dataset_dir, len(dataset_dirs))):
-        print(i)
-        dataset = dataset_dirs[i]
-        output = os.path.join(absolute_output_path, dataset[dataset.find(relative_input_path):])
-
-        configuration["outdir"] = output
-        configuration["dataset"] = dataset
-
-        inf = MoNuSegInference(
-        model_path=configuration["model"],
-        dataset_path=configuration["dataset"],
-        outdir=configuration["outdir"],
-        gpu=configuration["gpu"],
-        patching=configuration["patching"],
-        magnification=configuration["magnification"],
-        overlap=configuration["overlap"],)
-
-        inf.run_inference(generate_plots=configuration["plots"])
+    inf.run_inference(generate_plots=configuration["plots"])
 
 
