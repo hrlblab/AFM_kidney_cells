@@ -131,7 +131,7 @@ This work have experimented the following **annotation enrichment strategies** f
   |:---:|:---:|:---:|:---:|
   | StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)|[stardist_tuned](./stardist_tuned/README.md) |
   |Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
-  | CellViT   |  RGB | | |
+  | CellViT   |  RGB |[Combined](https://drive.google.com/file/d/1HUTBoCR5818S7Z7NM_ysxaPn3bSBXXGh/view?usp=drive_link) |[cellvit_tuned](./cellvit_tuned/README.md) |
 
 - Due to storage limits, the **best model weights** are listed above and saved in [model_weights](./model_weights/); all model weights are available on [Google Drive](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 

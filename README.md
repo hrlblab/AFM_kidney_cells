@@ -151,7 +151,7 @@ The tables summarize the evaluated SOTA cell FMs, their code sources, and our cu
   |:---:|:---:|:---:|:---:|
   | StarDist (Histo.) |  RGB |[Easy, Hard, Combined](./stage2_paper/model_weights/stardist/) | [stardist_tuned](./stage2_paper/stardist_tuned/README.md)|
   |Cellpose Finetuned| DAPI-like | [Easy](./stage2_paper/model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./stage2_paper/cellpose_tuned/README.md)
-  | CellViT   |  RGB | | |
+  | CellViT   |  RGB |[Combined](https://drive.google.com/file/d/1HUTBoCR5818S7Z7NM_ysxaPn3bSBXXGh/view?usp=drive_link) |[cellvit_tuned](./stage2_paper/cellvit_tuned/README.md) |
 
 - **Google Drive**:Due to storage limits, the **best model weights** are listed above and saved in [model_weights](./stage2_paper/model_weights/); all model weights are available on this [Google Drive Link](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 
