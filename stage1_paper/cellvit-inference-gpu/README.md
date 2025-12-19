@@ -21,23 +21,13 @@ Here, **`ca`** stands for **class-agnostic** inference for our kidney dataset.
 
 Ensure successful loading packages/libraries of [inference_cellvit_experiment_ca.py](CellViT/cell_segmentation/inference/inference_cellvit_experiment_ca.py).
 
-
-#### Option 1: Use Conda (Recommended)
-
-```bash
-conda env create -f environment.yml
-conda activate <env_name>
-```
-
-#### Option 2: Use Pip 
-
 ```bash
 conda create -n <env_name> python=3.9.7
 conda activate <env_name>
 
 pip install -r requirements.txt
 ```
-The `environment.yml` and `requirements.txt` files are taken from the original CellViT [<ins>GitHub repo</ins>](https://github.com/TIO-IKIM/CellViT/tree/main) (link here). 
+The `requirements.txt` file can be found in the original CellViT [<ins>GitHub repo</ins>](https://github.com/TIO-IKIM/CellViT/tree/main) (link here). 
 
 Installation should be straightforward, just ensure the inference script loads all required packages successfully.
 
