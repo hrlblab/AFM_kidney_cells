@@ -280,6 +280,6 @@ Contact: Junlin Guo (junlinguo1@gmail.com), Siqi Lu (slu09@wm.edu), Runchen Wang
 
 |Notes|Title|Publication|Paper|Code|
 |:---:|---|:---:|:---:|:---:|
-|**Cellpose-SAM**|**Cellpose-SAM: superhuman generalization for cellular segmentation**|Biorxiv 2025|[Paper]([#](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.abstract))|[Code](https://github.com/MouseLand/cellpose/blob/main/notebooks/run_Cellpose-SAM.ipynb)|
+|**Cellpose-SAM**|**Cellpose-SAM: superhuman generalization for cellular segmentation**|Biorxiv 2025|[Paper](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.abstract)|[Code](https://github.com/MouseLand/cellpose/blob/main/notebooks/run_Cellpose-SAM.ipynb)|
 |**CellViT + Advanced ViT backbones**|**CellViT++: Energy-Efficient and Adaptive Cell Segmentation and Classification Using Foundation Models***|Arxiv 2025|[Paper](https://arxiv.org/abs/2501.05269)|[Code](https://github.com/TIO-IKIM/CellViT-Plus-Plus)|
 |**Model**|**Name**|-|[Model Paper](#)|[link](#)|
