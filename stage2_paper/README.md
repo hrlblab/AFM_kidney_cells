@@ -149,7 +149,7 @@ This work have experimented the following **annotation enrichment strategies** f
 
   - We provide dummy hard (`fold_hard`) and easy (`fold_easy`) dataset folders in a [weighted_sampling_examples](weighted_sampling_examples) folder.
 
-  - **Weighted sampling**: The [weighted_sampling.py](./weighted_sampling_examples/weighted_sampling.py) script first concatenates `types.csv` from `fold_easy` and `fold_hard` folders and applies weighted sampling per [Supplementary Information 1](./supp_info.pdf). 
+  - **Weighted sampling**: The [weighted_sampling.py](./weighted_sampling_examples/weighted_sampling.py) script first concatenates `types.csv` (a list of image path and annotation class-"easy" or "hard") from `fold_easy` and `fold_hard` folders and applies weighted sampling per [Supplementary Information 1](./supp_info.pdf). 
 
     ```python
       # re-weight each row (sample) after concating types.csv 
@@ -159,7 +159,7 @@ This work have experimented the following **annotation enrichment strategies** f
           class_weights = {cls: total_samples / (gamma * count + (1-gamma)*total_samples) for cls, count in class_counts.items()}
           return class_weights 
       ```
-  - The output CSV contains image and label paths for the combined set, ready for constructing training data.
+  - The output CSV contains image and label paths for the combined set, ready for constructing training data for combined ("easy" + a small set of "hard") annotation strategy.
 
 
 ## License
