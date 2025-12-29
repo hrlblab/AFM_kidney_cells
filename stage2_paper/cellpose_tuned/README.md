@@ -122,7 +122,7 @@ python train_model.py --config /path/to/config.yaml
 
 In our work, we used these <ins>experimental training settings</ins>:
 
-- **Weighted Sampling:** We used "easy", "hard" annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf) and implementations [here](../README.md#5-weighted-sampling-in-training)).
+- **Weighted Sampling:** For training dataset, we used "easy", "hard" annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf) and implementations [here](../README.md#5-weighted-sampling-in-training)).
 
 - **Training Configurations:** See [Supplementary Information 2.2](../supp_info.pdf).
 
