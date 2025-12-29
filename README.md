@@ -278,10 +278,8 @@ Contact: Junlin Guo (junlinguo1@gmail.com), Siqi Lu (slu09@wm.edu), Runchen Wang
 
 ## Awesome Histopathological Nuclei Segmentation Models
 
-New awesome histopathological nuclei segmentation FMs or Specialists are continuously updated in this section. 
-
-|Abbreviation|Title|Publication|Paper|Code & Weights|
+|Notes|Title|Publication|Paper|Code|
 |:---:|---|:---:|:---:|:---:|
-|**Model**|**Name**|xxx 2025|[Model Paper](#)|[link](#)|
-|**Model**|**Name**|xxx 2024|[Model Paper](#)|[link](#)|
+|**Cellpose-SAM**|**Cellpose-SAM: superhuman generalization for cellular segmentation**|Biorxiv 2025|[Paper]([#](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.abstract))|[Code](https://github.com/MouseLand/cellpose/blob/main/notebooks/run_Cellpose-SAM.ipynb)|
+|**CellViT + Advanced ViT backbones**|**CellViT++: Energy-Efficient and Adaptive Cell Segmentation and Classification Using Foundation Models***|Arxiv 2025|[Paper](https://arxiv.org/abs/2501.05269)|[Code](https://github.com/TIO-IKIM/CellViT-Plus-Plus)|
 |**Model**|**Name**|-|[Model Paper](#)|[link](#)|
