@@ -113,7 +113,7 @@ To run inference with the trained model, use the path specified in `model_name` 
 
 ### Weighted Sampling (optional)
 
-- In our work, we used "easy", "hard" annotations, or a combined set (both types). For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf) and implementations [here](../README.md#5-weighted-sampling-in-training)).
+- In our work, we used "easy", "hard" annotations, or a combined set (both types) as the training dataset. For the combined set, we applied class-wise weighted oversampling (see [Supplementary Information 1](../supp_info.pdf) and implementations [here](../README.md#5-weighted-sampling-in-training)).
 
 ## Citation
 
