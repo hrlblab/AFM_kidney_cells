@@ -274,12 +274,16 @@ For questions or contributions, open an issue or pull request. We are looking fo
 
 Contact: Junlin Guo (junlinguo1@gmail.com), Siqi Lu (slu09@wm.edu), Runchen Wang (runchen.wang@Vanderbilt.Edu), Yuankai Huo (PI)(yuankai.huo@vanderbilt.edu)
 
-<br>
 
 ## Awesome Histopathological Nuclei Segmentation Models
 
 |Notes|Title|Publication|Paper|Code|
 |:---:|---|:---:|:---:|:---:|
-|**Cellpose-SAM**|**Cellpose-SAM: superhuman generalization for cellular segmentation**|Biorxiv 2025|[Paper](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.abstract)|[Code](https://github.com/MouseLand/cellpose/blob/main/notebooks/run_Cellpose-SAM.ipynb)|
+|**Cellpose-SAM**|**Cellpose-SAM: superhuman generalization for cellular segmentation**|Biorxiv 2025|[Paper](https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.abstract)| [Customized Inference](./stage3_paper/cellpose-sam-inference-gpu/) |
 |**CellViT + Advanced ViT backbones**|**CellViT++: Energy-Efficient and Adaptive Cell Segmentation and Classification Using Foundation Models***|Arxiv 2025|[Paper](https://arxiv.org/abs/2501.05269)|[Code](https://github.com/TIO-IKIM/CellViT-Plus-Plus)|
-|**Model**|**Name**|-|[Model Paper](#)|[link](#)|
+|**StarDist (Histopathology)**|**Nuclei instance segmentation and classification in histopathology images with StarDist**|ISBI 2022|[Paper](https://arxiv.org/abs/2203.02284)|[Customized Inference](./stage1_paper/stardist-inference-gpu/)|
+|**Kidney-specific, Foundation Models**|**Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment**|Nat. Commun. Med. 2025|[Paper](https://www.nature.com/articles/s43856-025-01205-x)|[Code](https://github.com/hrlblab/AFM_kidney_cells/tree/main/stage2_paper#3-finetuned-with-enriched-data) |
+|**Cellpose with U-Net backbone**|**Cellpose: a generalist algorithm for cellular segmentation**|Nat. Methods 2021|[Paper](https://www.nature.com/articles/s41592-020-01018-x)|[Customized Inference](./stage1_paper/cellpose-inference-gpu/) |
+|**Cancer Tissues**|**CellGenNet: A Knowledge-Distilled Framework for Robust Cell Segmentation in Cancer Tissues**|Arxiv 2025|[Paper](https://arxiv.org/abs/2511.15054)|-|
+|**SAM-based, Prompt Fine-tuning**|**Segment any cell: A sam-based auto-prompting fine-tuning framework for nuclei segmentation**|IEEE Trans. Neural Netw. Learn. Syst. 2025|[Paper](https://ieeexplore.ieee.org/abstract/document/11218040/?casa_token=G6TP48YkJgkAAAAA:7BNtZ7sjSfzdrC6PChjaF7YEi1W1FtQgx94CwCrDv3I2IzHjpj1r4vbA6IOtVQrcKUeDzsjK7Q)|-|
+|**Survey paper**|**A Systematic Review on Cell Nucleus Instance Segmentation**|IET Image Processing 2025|[Paper](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/ipr2.70129)|-|
