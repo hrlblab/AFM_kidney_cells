@@ -22,29 +22,27 @@
 
 This **ongoing project** welcomes researchers to **share** their work with the **cell segmentation community** by submitting pull requests or issues to add or update paper information here: [**Awesome Histopathological Nuclei Segmentation Models**](#awesome-histopathological-nuclei-segmentation-models).
 
-## 🔥 Last Updated: 2025.12.7
-- **[2025.12.7]** Stage 2 fine-tuned **model weights** and instructions: **Cellpose, StarDist, CellViT**
+## 🔥 Last Updated: 2026.03.22
+- **[Fine-tuned]** Stage 2 fine-tuned models *Cellpose, StarDist, CellViT*
 
-  → [stage2_paper](stage2_paper) directory: [model_weights](./stage2_paper/model_weights/) (select best from strategies)
+  → [stage2_paper](stage2_paper) directory
 
-  → [Google drive link](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing): All model weights, CellViT finetuned checkpoints (due to storage limit) 
+  → [model_weights](./stage2_paper/model_weights/) (select best from fine-tuned strategies). Due to the storage limit of CellViT folder, **All model weights** are saved in [(Google drive link)](https://drive.google.com/drive/folders/1ztkcIC63Kjwafq6tHuEnENSdZ8-H3gSz?usp=sharing).
 
-  → [QuPath StarDist Plugin Guide](./qupath_stardist/): How to installed and use pretrained models in QuPath.
-  
-  → [Links to the finetuned StarDist QuPath model files](./stage2_paper/model_weights/stardist-qupath/) (.pb files for QuPath usage).
+  → [QuPath StarDist Plugin Guide](./qupath_stardist/): How to installed and use pretrained models in QuPath. [Use/Link the finetuned StarDist model](./stage2_paper/model_weights/stardist-qupath/) (.pb files for QuPath usage).
 
 
+- **[Inference]** Stage 3 baseline models *CellViT++, Cellpose-SAM*: 
 
-- **[2025.11.16]** Stage 3 baseline models Inference (**CellViT++, Cellpose-SAM**):  
-  → [stage3_paper](stage3_paper) directory: Cellpose-SAM (done)
-- **[2025.11.05]** Stage 1, 2 baseline models Inference (**CellViT, StarDist, Cellpose**) are available in:  
+  → [stage3_paper](stage3_paper) directory
+- **[Inference]** Stage 1, 2 baseline models *CellViT, StarDist, Cellpose* are available in:  
   → [Model Summary Table](#-cell-fms-inference-pipeline--model-summary)  
   → [stage1_paper](stage1_paper) directory
 
 
-- **[Use in QuPath]** Masks/Predictions converted to Geojson (Qupath): [mask_to_geojson_qupath.py](./mask_to_geojson_qupath.py)
+- **[Mask to QuPath GeoJson]**: [mask_to_geojson_qupath.py](./mask_to_geojson_qupath.py)
 
-- **[In Progress]** Annotated dataset curation for the **2nd KPI Challenge**.
+- **[In Progress: Annotation Curation]** Annotated dataset for the **2nd KPI Challenge**.
 
 ### 📢 Publication Updates
 
