@@ -13,7 +13,7 @@ A customized patch-level GPU inference code using the **Cellpose 2.0** model. Th
 
 ## Installation
 
-Ensure successful loading packages/librareis of `cellpose_gpu.py`. Detail versions like `cellpose`, etc can be found in `environment.yml` or `requirements.txt`
+Ensure successful loading packages/librareis of `cellpose_gpu.py`. Detail versions like `cellpose` (for baseline inference, CNN based backbone in this paper is `cellpose 2.0+`, the SAM ViT-H based backbone is `cellpose 4.0+` in [Stage 3 Paper](../../stage3_paper/cellpose-sam-inference-gpu/)), etc can be found in `environment.yml` or `requirements.txt`
 
 ### Option 1: Using Conda (Recommended)
 

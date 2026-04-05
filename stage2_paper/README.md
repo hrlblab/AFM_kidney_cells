@@ -111,7 +111,7 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ## Implementations and Codes
 
-### 1. Individual Cell FMs Inference and Ratings
+### 1. Individual Cell FMs Inference (Baselines: Stage 1 Paper)
 
   Model | Original Baseline Inference code|
   |:---:|:---:|
@@ -127,7 +127,7 @@ This work have experimented the following **annotation enrichment strategies** f
 
 ### 3. Finetuned with Enriched Data 
 
-  Finetuned Models | data processing| Weights from Strategies | Implementations|
+  Finetuned Models | Data processing| New Model Weights (different strategies) | Implementations (Tuning, Inference)|
   |:---:|:---:|:---:|:---:|
   | StarDist (Histo.) |  RGB | [Easy, Hard, Combined](./model_weights/stardist/)|[stardist_tuned](./stardist_tuned/README.md) |
   |Cellpose Finetuned| DAPI-like | [Easy](./model_weights/cellpose/Easy_100%/) | [cellpose_tuned](./cellpose_tuned/README.md)
