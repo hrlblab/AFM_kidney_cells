@@ -31,12 +31,20 @@ The `requirements.txt` file can be found in the original CellViT [<ins>GitHub re
 
 Installation should be straightforward, just ensure the inference script loads all required packages successfully.
 
+> **Note:** `torchvision` is not pinned in `requirements.txt`. If you hit `ModuleNotFoundError: No module named 'torchvision'`, install a version matching your `torch` build. For example, with `torch==2.8.0+cu128`:
+> ```bash
+> pip install torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu128
+> ```
+> Refer to the [PyTorch compatibility matrix](https://pytorch.org/get-started/previous-versions/) for other `torch` versions.
+
 
 ## Usage 
 
 ### Dataset Prep
 
-Simply place your image patches into a folder (e.g., the 512x512 PAS patches (40x) in the [**examples**](../examples/) directory).
+- Simply place your image patches into a folder (e.g., the 512x512 PAS patches (40x) in the [**examples**](../examples/) directory).
+
+- Input patches whose height or width is not a multiple of 256 (e.g., 224×224 → 256×256, 516×516 → 512×512) are automatically resized to the nearest multiple of 256 (minimum 256) before inference, and the output mask / contour overlay are resized back to the original input resolution.
 
 
 ### Model Checkpoints

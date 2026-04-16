@@ -9,9 +9,11 @@
 # University Medicine Essen
 
 import logging
+import math
 from pathlib import Path
 from typing import Callable, Union, Tuple
 
+import cv2
 import numpy as np
 import torch
 from PIL import Image
@@ -19,6 +21,10 @@ from torch.utils.data import Dataset
 
 from cell_segmentation.datasets.pannuke import PanNukeDataset
 from einops import rearrange
+
+
+def _nearest_multiple(size: int, base: int = 256) -> int:
+    return max(base, int(round(size / base) * base))
 
 logger = logging.getLogger()
 logger.addHandler(logging.NullHandler())
@@ -80,25 +86,21 @@ class MoNuSegDataset(Dataset):
                 * str: filename
         """
         img_path = self.images[index]
+        orig_h, orig_w = 256, 256
         try:
-            img = np.array(Image.open(img_path)).astype(np.uint8)
+            img = np.array(Image.open(img_path).convert("RGB")).astype(np.uint8)
+            orig_h, orig_w = img.shape[:2]
 
-            # mask_path = self.masks[index]
-            # mask = np.load(mask_path, allow_pickle=True)
-            # mask = mask.astype(np.int64)
+            # Resize to nearest multiple of 256 (min 256) so patching/model input is valid.
+            target_h = _nearest_multiple(orig_h, 256)
+            target_w = _nearest_multiple(orig_w, 256)
+            if (orig_h, orig_w) != (target_h, target_w):
+                img = cv2.resize(img, (target_w, target_h), interpolation=cv2.INTER_LINEAR)
 
             if self.transforms is not None:
-                # transformed = self.transforms(image=img, mask=None)
                 transformed = self.transforms(image=img)
                 img = transformed["image"]
-                # mask = transformed["mask"]
 
-        ########## no need to do here ###########################
-            # hv_map = PanNukeDataset.gen_instance_hv_map(mask)
-            # np_map = mask.copy()
-            # np_map[np_map > 0] = 1
-
-            # torch convert
             img = torch.Tensor(img).type(torch.float32)
             img = img.permute(2, 0, 1)
             if torch.max(img) >= 5:
@@ -114,16 +116,6 @@ class MoNuSegDataset(Dataset):
                     2, 256, 256 - self.overlap
                 )
 
-            # masks = {
-            #     "instance_map": torch.Tensor(mask).type(torch.int64),
-            #     "nuclei_binary_map": torch.Tensor(np_map).type(torch.int64),
-            #     "hv_map": torch.Tensor(hv_map).type(torch.float32),
-            # }
-
-
-
-
-        ############## Add by Junlin############################################
         except Exception as e:
             print(f'{img_path} has IO error, specify a zero tensor with a shape')
             shape = self.tensor_shape
@@ -138,7 +130,7 @@ class MoNuSegDataset(Dataset):
 
         masks = {}
 
-        return img, masks, Path(img_path).name
+        return img, masks, Path(img_path).name, (orig_h, orig_w)
 
     def __len__(self) -> int:
         """Length of Dataset
