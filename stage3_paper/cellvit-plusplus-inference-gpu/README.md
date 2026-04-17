@@ -32,6 +32,9 @@ The `requirements.txt` file can be also found in the original CellViT [<ins>GitH
 
 Installation should be straightforward, just ensure the inference script loads all required packages successfully.
 
+> **Note:** CellViT++ adds a `CellViTVirchow` backbone, which pulls in a `timm`-based ViT implementation.  `pip install timm`
+
+
 ## Usage 
 
 ### Dataset Prep

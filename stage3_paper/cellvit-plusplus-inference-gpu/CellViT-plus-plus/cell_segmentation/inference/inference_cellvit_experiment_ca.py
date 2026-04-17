@@ -344,6 +344,11 @@ class MoNuSegInference:
             img = rearrange(img, "c i j w h -> (i j) c w h")
         mask = batch[1]
         image_name = list(batch[2])
+        orig_size = None
+        if len(batch) > 3:
+            raw = batch[3]
+            orig_size = (int(raw[0][0]) if hasattr(raw[0], "__len__") else int(raw[0]),
+                         int(raw[1][0]) if hasattr(raw[1], "__len__") else int(raw[1]))
 
         # len(mask) == 0 , no mask provided
         if len(mask) > 0:
@@ -381,6 +386,14 @@ class MoNuSegInference:
 
         # always save the instance mask as npy
         pred_sample_instance_maps = predictions["instance_map"].detach().cpu().numpy()[0]
+        if orig_size is not None:
+            oh, ow = int(orig_size[0]), int(orig_size[1])
+            cur_h, cur_w = pred_sample_instance_maps.shape[:2]
+            if (cur_h, cur_w) != (oh, ow):
+                pred_sample_instance_maps = cv2.resize(
+                    pred_sample_instance_maps.astype(np.int32), (ow, oh),
+                    interpolation=cv2.INTER_NEAREST,
+                )
         np.save(
             os.path.join(self.outdir, f'{image_name[0].replace(".png", "")}_contours.npy'),
             pred_sample_instance_maps,
@@ -418,7 +431,8 @@ class MoNuSegInference:
                 # scores=scores,
                 scores= None,
                 # add
-                binary=False
+                binary=False,
+                orig_size=orig_size,
             )
 
 
@@ -798,7 +812,8 @@ class MoNuSegInference:
         img_name: str,
         outdir: Path,
         scores: List[float],
-        binary = False
+        binary = False,
+        orig_size: Tuple[int, int] = None,
     ) -> None:
         """Plot MoNuSeg results
 
@@ -852,6 +867,23 @@ class MoNuSegInference:
         )
         inv_samples = inv_normalize(torch.tensor(sample_image).permute(0, 3, 1, 2))
         sample_image = inv_samples.permute(0, 2, 3, 1).detach().cpu().numpy()[0]
+
+        # Resize outputs back to the original input resolution (if it was upscaled for patching).
+        if orig_size is not None:
+            oh, ow = int(orig_size[0]), int(orig_size[1])
+            cur_h, cur_w = pred_sample_instance_maps.shape[:2]
+            if (cur_h, cur_w) != (oh, ow):
+                pred_sample_instance_maps = cv2.resize(
+                    pred_sample_instance_maps.astype(np.int32), (ow, oh),
+                    interpolation=cv2.INTER_NEAREST,
+                )
+                pred_sample_binary_map = cv2.resize(
+                    pred_sample_binary_map.astype(np.uint8), (ow, oh),
+                    interpolation=cv2.INTER_NEAREST,
+                )
+                sample_image = cv2.resize(
+                    sample_image, (ow, oh), interpolation=cv2.INTER_LINEAR,
+                )
 
         ## Binary map
         if binary:
