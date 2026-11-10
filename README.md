@@ -6,6 +6,7 @@
   <a href='https://arxiv.org/abs/2408.06381'><img src='https://img.shields.io/badge/Stage1--Paper-SPIE-25'></a> 
   <a href='https://www.nature.com/articles/s43856-025-01205-x'><img src='https://img.shields.io/badge/Stage2--Paper-Nat.Comm.Med.-red'></a> 
   <a href='https://arxiv.org/abs/2510.01287'><img src='https://img.shields.io/badge/Stage3--Paper-SPIE-26'></a> 
+  <a href='https://arxiv.org/abs/2610.07711'><img src='https://img.shields.io/badge/Stage4--Paper-SPIE-27'></a> 
 </p>
 
 <p align="center">
@@ -45,7 +46,10 @@ This **ongoing project** welcomes researchers to **share** their work with the *
 - **[In Progress: Annotation Curation]** Annotated dataset for the **2nd KPI Challenge**.
 
 ### 📢 Publication Updates
-
+- **[2026.10.26] — Stage 4 (Medical Imaging 2027)**  
+  [*Comprehensive Evaluation and Fine-Tuning of Foundational Cell Nuclei Segmentation Models in Renal Pathology*](https://arxiv.org/abs/2610.07711)  
+  **Keywords:** Evaluation and Fine-Tuning; Cell FMs (2026)
+  
 - **[2025.10.30] — Stage 3 (Medical Imaging 2026)**  
   [*Evaluating New AI Cell Foundation Models on Challenging Kidney Pathology Cases Unaddressed by Previous Foundation Models*](https://arxiv.org/abs/2510.01287)  
   **Keywords:** Next-gen CellFM-HITL with newer Cell FMs (2025); challenging-case evaluation.
